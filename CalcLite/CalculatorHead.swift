@@ -23,7 +23,6 @@ import Foundation
         "Sqrt" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
         "tan" : Operation.UnaryOperation(tan),
-        //
         "sin" : Operation.UnaryOperation(sin),
         //
         "×": Operation.BinaryOperation({ $0 * $1 }),

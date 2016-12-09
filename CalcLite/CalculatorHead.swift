@@ -25,7 +25,7 @@ import Foundation
         "tan" : Operation.UnaryOperation(tan),
         
         "sin" : Operation.UnaryOperation(sin),
-        
+        //
         "×": Operation.BinaryOperation({ $0 * $1 }),
         "÷": Operation.BinaryOperation({ $0 / $1 }),
         "+": Operation.BinaryOperation({ $0 + $1 }),

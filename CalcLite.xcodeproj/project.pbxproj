@@ -14,6 +14,7 @@
 		25E8EBB21DF84BED00B81DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8EBB01DF84BED00B81DA4 /* LaunchScreen.storyboard */; };
 		25E8EBBD1DF84BED00B81DA4 /* CalcLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBBC1DF84BED00B81DA4 /* CalcLiteTests.swift */; };
 		25E8EBC81DF84BEE00B81DA4 /* CalcLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBC71DF84BEE00B81DA4 /* CalcLiteUITests.swift */; };
+		25E8EBD71DF880E500B81DA4 /* CalculatorHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		25E8EBC31DF84BEE00B81DA4 /* CalcLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E8EBC71DF84BEE00B81DA4 /* CalcLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcLiteUITests.swift; sourceTree = "<group>"; };
 		25E8EBC91DF84BEE00B81DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorHead.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		25E8EBA61DF84BED00B81DA4 /* CalcLite */ = {
 			isa = PBXGroup;
 			children = (
-				25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */,
 				25E8EBA91DF84BED00B81DA4 /* ViewController.swift */,
 				25E8EBAB1DF84BED00B81DA4 /* Main.storyboard */,
-				25E8EBAE1DF84BED00B81DA4 /* Assets.xcassets */,
-				25E8EBB01DF84BED00B81DA4 /* LaunchScreen.storyboard */,
-				25E8EBB31DF84BED00B81DA4 /* Info.plist */,
+				25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */,
+				25E8EBD51DF8641C00B81DA4 /* Support Files */,
 			);
 			path = CalcLite;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				25E8EBC91DF84BEE00B81DA4 /* Info.plist */,
 			);
 			path = CalcLiteUITests;
+			sourceTree = "<group>";
+		};
+		25E8EBD51DF8641C00B81DA4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */,
+				25E8EBAE1DF84BED00B81DA4 /* Assets.xcassets */,
+				25E8EBB01DF84BED00B81DA4 /* LaunchScreen.storyboard */,
+				25E8EBB31DF84BED00B81DA4 /* Info.plist */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				25E8EBAA1DF84BED00B81DA4 /* ViewController.swift in Sources */,
 				25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */,
+				25E8EBD71DF880E500B81DA4 /* CalculatorHead.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

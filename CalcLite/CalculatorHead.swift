@@ -129,13 +129,13 @@ class CalculatorHead: CalcBrainInterface
     }
     
     func perform0peration(symbol: String) {
-        switch symbol {
+        /*switch symbol {
         case "-" :
             let possibleBinary = binaryOperation(rawValue: symbol)
             self.binary(operation: possibleBinary!)
         default:
             break
-        }
+        }*/
         if binaryOperation(rawValue: symbol) != nil {
             let possibleBinary = binaryOperation(rawValue: symbol)
             self.binary(operation: possibleBinary!)

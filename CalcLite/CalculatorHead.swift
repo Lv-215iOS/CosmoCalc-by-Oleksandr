@@ -39,7 +39,6 @@ class CalculatorHead: CalcBrainInterface
     
     //private var accumulator = 0.0
     
-    
     //let objCalcHead = CalculatorHead()
     
     var operandOne: Double?

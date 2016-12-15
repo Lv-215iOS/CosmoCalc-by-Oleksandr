@@ -104,16 +104,20 @@ class CalculatorHead: CalcBrainInterface
         switch operation {
         //case .Dot:
         case .Equal: //Operation.Equals
-            //print(temp!)
+            print("Equal")
             switch temp! {
             case "-" :
                 operandOne = operandOne! - operandTwo!
+                operandTwo = nil
             case "+" :
                 operandOne = operandOne! + operandTwo!
+                operandTwo = nil
             case "*" :
                 operandOne = operandOne! * operandTwo!
+                operandTwo = nil
             case "/" :
                 operandOne = operandOne! / operandTwo!
+                operandTwo = nil
             case "cos":
                 operandOne = cos(operandOne!)
             case "Sqrt":
@@ -154,49 +158,49 @@ class CalculatorHead: CalcBrainInterface
     var result: ((Double?, Error?)->())? = nil
     /*
      func set0perand(operand: Double) {
-     accumulator = operand
+        accumulator = operand
      }
      private var operations: Dictionary <String, Operation> = [
-     "π" : Operation.Constant(M_PI),
-     "e" : Operation.Constant(M_E),
-     "±" : Operation.UnaryOperation({ -$0}),
-     "Sqrt" : Operation.UnaryOperation(sqrt),
-     "cos" : Operation.UnaryOperation(cos),
-     "×": Operation.BinaryOperation({ $0 * $1 }),
-     "÷": Operation.BinaryOperation({ $0 / $1 }),
-     "+": Operation.BinaryOperation({ $0 + $1 }),
-     "−": Operation.BinaryOperation({ $0 - $1 }),
-     "=": Operation.Equals
+        "π" : Operation.Constant(M_PI),
+        "e" : Operation.Constant(M_E),
+        "±" : Operation.UnaryOperation({ -$0}),
+        "Sqrt" : Operation.UnaryOperation(sqrt),
+        "cos" : Operation.UnaryOperation(cos),
+        "×": Operation.BinaryOperation({ $0 * $1 }),
+        "÷": Operation.BinaryOperation({ $0 / $1 }),
+        "+": Operation.BinaryOperation({ $0 + $1 }),
+        "−": Operation.BinaryOperation({ $0 - $1 }),
+        "=": Operation.Equals
      ]*/
      /*private enum Operation {
-     case Constant(Double?)
-     case UnaryOperation((Double?) -> Double?)
-     case BinaryOperation((Double?, Double?) -> Double?)
-     case Equals
+        case Constant(Double?)
+        case UnaryOperation((Double?) -> Double?)
+        case BinaryOperation((Double?, Double?) -> Double?)
+        case Equals
      }*/
     
     /*func perform0peration(symbol: String) {
-     if let operation = operations[symbol]{
-     switch operation{
-     case .Constant(let value):
-     accumulator = value
-     case .UnaryOperation(let function):
-     accumulator = function(accumulator)
-     case .BinaryOperation(let function):
-     executePendingBinaryOperation()
-     pending = PendingBinaryOperationInfo(binaryFunction: function, fistOperand: accumulator)
-     case .Equals:
-     executePendingBinaryOperation()
-     }
-     }
+        if let operation = operations[symbol]{
+        switch operation{
+            case .Constant(let value):
+                accumulator = value
+            case .UnaryOperation(let function):
+                accumulator = function(accumulator)
+            case .BinaryOperation(let function):
+                executePendingBinaryOperation()
+                pending = PendingBinaryOperationInfo(binaryFunction: function, fistOperand: accumulator)
+            case .Equals:
+            executePendingBinaryOperation()
+            }
+        }
      }*/
     
     /*
      private func executePendingBinaryOperation()
      {
-     if pending != nil {
-     accumulator = pending!.binaryFunction(pending!.fistOperand, accumulator)
-     pending = nil
+        if pending != nil {
+        accumulator = pending!.binaryFunction(pending!.fistOperand, accumulator)
+        pending = nil
      }
      }
      
@@ -204,14 +208,14 @@ class CalculatorHead: CalcBrainInterface
      
      
      private struct PendingBinaryOperationInfo{
-     var binaryFunction: (Double, Double) -> Double
-     var fistOperand: Double
+        var binaryFunction: (Double, Double) -> Double
+        var fistOperand: Double
      }
      
      var result: Double {
-     get {
-     return accumulator
-     }
+        get {
+        return accumulator
+        }
      }*/
     
 }

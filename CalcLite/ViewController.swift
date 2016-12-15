@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             UserIsInTheMiddleOfTyping = false
         }
         head.perform0peration(symbol: sender.currentTitle!)
+        
         /*if sender.currentTitle == "-" {
             head.binary(operation: .Minus)
         }*/

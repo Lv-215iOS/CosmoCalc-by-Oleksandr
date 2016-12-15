@@ -9,11 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet private weak var display: UILabel!
+    private var head = CalculatorHead()
     
+    var outputController: OutputViewController? = nil
+    var inputController: InputViewController? = nil
     private var UserIsInTheMiddleOfTyping = false
     
+    override func viewDidLoad() {
+        super.viewDidLoad() // Do any additional setup after loading the view
+    }
+    
+    @IBOutlet private weak var display: UILabel!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OutputControllerEmbedSegue" {
+            outputController = segue.destination as? OutputViewController
+            outputController?.mainVC = self
+        } else if segue.identifier == "InputControllerEmbedSegue" {
+            inputController = segue.destination as? InputViewController
+            inputController?.mainVC = self
+        }
+    }
+
+    
+    //
     @IBAction private func touchButtons(_ sender: UIButton)  {
         let digit = sender.currentTitle!
         if UserIsInTheMiddleOfTyping {
@@ -34,17 +53,19 @@ class ViewController: UIViewController {
         }
     }
     
-    private var head = CalculatorHead()
+    //private var head = CalculatorHead()
     
     @IBAction private func performOperation(_ sender: UIButton) {
         if UserIsInTheMiddleOfTyping {
-            head.set0perand(operand: displayValue)
+            head.digit(value: displayValue)
+               UserIsInTheMiddleOfTyping = false
         }
-        UserIsInTheMiddleOfTyping = false
         if let mathematicalSymbol = sender.currentTitle {
             head.perform0peration(symbol: mathematicalSymbol)
         }
-        displayValue = head.result
+        head.result = { (value, error) -> () in //viewDidLoad
+            self.displayValue = value!
+        }
+        //  head.result?()
     }
 }
-    

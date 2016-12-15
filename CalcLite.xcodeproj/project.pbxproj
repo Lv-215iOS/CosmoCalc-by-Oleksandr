@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		255013471DFEC0EB0070AEC0 /* round-big-button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 255013461DFEC0EB0070AEC0 /* round-big-button.jpg */; };
+		2565CB0C1E014B71004905B0 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565CB0B1E014B71004905B0 /* OutputViewController.swift */; };
+		2565CB0E1E014B82004905B0 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565CB0D1E014B82004905B0 /* InputViewController.swift */; };
 		25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */; };
 		25E8EBAA1DF84BED00B81DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA91DF84BED00B81DA4 /* ViewController.swift */; };
 		25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8EBAB1DF84BED00B81DA4 /* Main.storyboard */; };
@@ -14,7 +17,7 @@
 		25E8EBB21DF84BED00B81DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8EBB01DF84BED00B81DA4 /* LaunchScreen.storyboard */; };
 		25E8EBBD1DF84BED00B81DA4 /* CalcLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBBC1DF84BED00B81DA4 /* CalcLiteTests.swift */; };
 		25E8EBC81DF84BEE00B81DA4 /* CalcLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBC71DF84BEE00B81DA4 /* CalcLiteUITests.swift */; };
-		25E8EBD71DF880E500B81DA4 /* CalculatorHead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */; };
+		25E8EBD71DF880E500B81DA4 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBD61DF880E500B81DA4 /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		255013461DFEC0EB0070AEC0 /* round-big-button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "round-big-button.jpg"; path = "../../../Downloads/round-big-button.jpg"; sourceTree = "<group>"; };
+		2565CB0B1E014B71004905B0 /* OutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		2565CB0D1E014B82004905B0 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		25E8EBA41DF84BED00B81DA4 /* CalcLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E8EBA91DF84BED00B81DA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +54,7 @@
 		25E8EBC31DF84BEE00B81DA4 /* CalcLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E8EBC71DF84BEE00B81DA4 /* CalcLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcLiteUITests.swift; sourceTree = "<group>"; };
 		25E8EBC91DF84BEE00B81DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorHead.swift; sourceTree = "<group>"; };
+		25E8EBD61DF880E500B81DA4 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,12 @@
 		25E8EBA61DF84BED00B81DA4 /* CalcLite */ = {
 			isa = PBXGroup;
 			children = (
+				255013461DFEC0EB0070AEC0 /* round-big-button.jpg */,
 				25E8EBA91DF84BED00B81DA4 /* ViewController.swift */,
 				25E8EBAB1DF84BED00B81DA4 /* Main.storyboard */,
-				25E8EBD61DF880E500B81DA4 /* CalculatorHead.swift */,
+				25E8EBD61DF880E500B81DA4 /* CalculatorBrain.swift */,
+				2565CB0B1E014B71004905B0 /* OutputViewController.swift */,
+				2565CB0D1E014B82004905B0 /* InputViewController.swift */,
 				25E8EBD51DF8641C00B81DA4 /* Support Files */,
 			);
 			path = CalcLite;
@@ -204,6 +213,7 @@
 				TargetAttributes = {
 					25E8EBA31DF84BED00B81DA4 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = MG2T55V3SN;
 						ProvisioningStyle = Automatic;
 					};
 					25E8EBB71DF84BED00B81DA4 = {
@@ -246,6 +256,7 @@
 				25E8EBB21DF84BED00B81DA4 /* LaunchScreen.storyboard in Resources */,
 				25E8EBAF1DF84BED00B81DA4 /* Assets.xcassets in Resources */,
 				25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */,
+				255013471DFEC0EB0070AEC0 /* round-big-button.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E8EBAA1DF84BED00B81DA4 /* ViewController.swift in Sources */,
+				2565CB0E1E014B82004905B0 /* InputViewController.swift in Sources */,
+				2565CB0C1E014B71004905B0 /* OutputViewController.swift in Sources */,
 				25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */,
-				25E8EBD71DF880E500B81DA4 /* CalculatorHead.swift in Sources */,
+				25E8EBD71DF880E500B81DA4 /* CalculatorBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MG2T55V3SN;
 				INFOPLIST_FILE = CalcLite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalcLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,7 +451,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MG2T55V3SN;
 				INFOPLIST_FILE = CalcLite/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalcLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,6 +534,7 @@
 				25E8EBCE1DF84BEE00B81DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25E8EBCF1DF84BEE00B81DA4 /* Build configuration list for PBXNativeTarget "CalcLiteTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +543,7 @@
 				25E8EBD11DF84BEE00B81DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25E8EBD21DF84BEE00B81DA4 /* Build configuration list for PBXNativeTarget "CalcLiteUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +552,7 @@
 				25E8EBD41DF84BEE00B81DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

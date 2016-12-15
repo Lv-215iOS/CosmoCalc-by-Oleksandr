@@ -54,6 +54,7 @@ class CalculatorHead: CalcBrainInterface
             print("Now we have Op2", operandTwo!)
         }
     }
+    
     func binary(operation: binaryOperation) {
         switch operation {
             /*case .Plus: Operation.BinaryOperation({$0 * $1})

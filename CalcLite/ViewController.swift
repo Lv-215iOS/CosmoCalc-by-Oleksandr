@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         /*if sender.currentTitle == "-" {
             head.binary(operation: .Minus)
         }*/
-        //displayValue = head.result
+        // displayValue = head.result
         
         head.result = { (value, error) -> () in //viewDidLoad
             self.displayValue = value!

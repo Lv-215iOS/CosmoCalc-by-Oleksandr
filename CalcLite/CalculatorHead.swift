@@ -24,6 +24,7 @@ enum utilityOperation: String {
 enum unaryOperation: String {
     case Cos = "cos"
     case Sqrt = "Sqrt"
+    case Sin = "sin"
 }
 
 protocol CalcBrainInterface {
@@ -97,8 +98,11 @@ class CalculatorHead: CalcBrainInterface
             value = (cos(operandOne ?? 0.0 ))
             temp = operation.rawValue
             print("Cos = ", value!)
+        case .Sin:
+            value = (sin(operandOne ?? 0.0 ))
+            temp = operation.rawValue
+            print("Sin = ", value!)
         }
-        
     }
     func utility(operation: utilityOperation) {
         switch operation {
@@ -122,6 +126,8 @@ class CalculatorHead: CalcBrainInterface
                 operandOne = cos(operandOne!)
             case "Sqrt":
                 operandOne = sqrt(operandOne!)
+            case "sin":
+                operandOne = sin(operandOne!)
             default:
                 break
             }
@@ -153,6 +159,12 @@ class CalculatorHead: CalcBrainInterface
             self.utility(operation: possibleUtility!)
         }
         
+    }
+    
+    func clear() {
+        value = 0.0
+        operandOne = nil
+        operandTwo = nil
     }
     
     var result: ((Double?, Error?)->())? = nil

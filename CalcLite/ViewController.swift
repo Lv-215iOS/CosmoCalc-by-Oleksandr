@@ -13,10 +13,17 @@ class ViewController: UIViewController {
     @IBOutlet private weak var display: UILabel!
     
     private var UserIsInTheMiddleOfTyping = false
+    private var decimalUsed = false
     
     @IBAction private func touchButtons(_ sender: UIButton)  {
         let digit = sender.currentTitle!
         if UserIsInTheMiddleOfTyping {
+            if digit == "." && decimalUsed == true {
+                return
+            } else if digit == "." && decimalUsed == false {
+                decimalUsed = true
+            }
+            
             let TextCurrentlyInDisplay = display.text!
             display.text = TextCurrentlyInDisplay + digit
         } else {
@@ -51,7 +58,17 @@ class ViewController: UIViewController {
         head.result = { (value, error) -> () in //viewDidLoad
             self.displayValue = value!
         }
-
     }
-}
     
+    @IBAction func clear(_ sender: AnyObject) {
+        UserIsInTheMiddleOfTyping = false
+        decimalUsed = false
+        head.clear()
+        //displayValue = head.result
+        head.result = { (value, error) -> () in
+            self.displayValue = value!
+        }
+        self.display.text = "0"
+    }
+    
+}

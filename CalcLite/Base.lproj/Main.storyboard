@@ -120,7 +120,7 @@
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vSF-qw-nbj"/>
+                                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUk-Fb-Xzu"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -161,7 +161,7 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijh-HZ-0Ws">
                                                         <rect key="frame" x="265" y="0.0" width="78" height="109"/>
                                                         <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="π">
+                                                        <state key="normal" title="sin">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
@@ -235,7 +235,7 @@
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRJ-mt-OuY"/>
+                                                            <action selector="touchButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6JF-FU-46c"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH2-m1-XC8">

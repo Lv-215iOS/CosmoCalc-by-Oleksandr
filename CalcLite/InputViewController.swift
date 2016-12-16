@@ -29,6 +29,7 @@ class InputViewController: UIViewController, InputInterface {
     func equalOperationPressed(_ sender: UIButton) {
         buttonDidPress?(sender.currentTitle!)
     }
+    
 
 
     

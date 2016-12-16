@@ -9,7 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //private var head = CalculatorHead()
+    
+    var outputController: OutputViewController? = nil
+    var inputController: InputViewController? = nil
+    
+    //private var UserIsInTheMiddleOfTyping = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad() // Do any additional setup after loading the view
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "OutputControllerEmbedSegue" {
+            outputController = segue.destination as? OutputViewController
+            outputController?.mainVC = self
+        } else if segue.identifier == "InputControllerEmbedSegue" {
+            inputController = segue.destination as? InputViewController
+            inputController?.mainVC = self
+        }
+    }
 
+//
     @IBOutlet private weak var display: UILabel!
     
     private var UserIsInTheMiddleOfTyping = false

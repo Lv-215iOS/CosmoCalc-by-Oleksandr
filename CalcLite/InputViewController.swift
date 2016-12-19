@@ -18,41 +18,68 @@ class InputViewController: UIViewController, InputInterface {
     
     var buttonDidPress: ((String) -> ())? = nil
     
-    func pressDigit(_ sender: UIButton) {
-        buttonDidPress?(sender.currentTitle!)
+    
+    
+    private var UserIsInTheMiddleOfTyping = false
+    private var decimalUsed = false
+    
+    
+    @IBAction func touchButtons(_ sender: UIButton) {
+        mainVC?.buttonPressed(button: sender)
     }
     
-    func binaryOperationPressed(_ sender: UIButton){
-        buttonDidPress?(sender.currentTitle!)
+    @IBAction func performOperation(_ sender: UIButton) {
+        mainVC?.performingCurrentOperation(operation: sender)
     }
-    
-    func equalOperationPressed(_ sender: UIButton) {
-        buttonDidPress?(sender.currentTitle!)
-    }
-    
 
-
+    @IBAction func clear(_ sender: AnyObject) {
+        mainVC?.clerAll(operand: sender)
+    }
+    
+    /*
+     func pressDigit(_ sender: UIButton) {
+     buttonDidPress?(sender.currentTitle!)
+     }
+     
+     func binaryOperationPressed(_ sender: UIButton){
+     buttonDidPress?(sender.currentTitle!)
+     }
+     
+     func equalOperationPressed(_ sender: UIButton) {
+     buttonDidPress?(sender.currentTitle!)
+     }*/
+    
+    
+    
     
     
     /*override func viewDidLoad() {
-        super.viewDidLoad()
+     super.viewDidLoad()
+     
+     // Do any additional setup after loading the view.
+     }
+     override func didReceiveMemoryWarning() {
+     super.didReceiveMemoryWarning()
+     // Dispose of any resources that can be recreated.
+     }*/
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
-        // Do any additional setup after loading the view.
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }*/
+    
+    //end
+}
+    
+    
+    
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}

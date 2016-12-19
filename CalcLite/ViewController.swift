@@ -8,17 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate{
     
     //private var head = CalculatorHead()
     
     var outputController: OutputViewController? = nil
     var inputController: InputViewController? = nil
+    private var head = CalculatorHead()
     
     //private var UserIsInTheMiddleOfTyping = false
     
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,15 +32,21 @@ class ViewController: UIViewController {
             inputController?.mainVC = self
         }
     }
-
-//
-    @IBOutlet private weak var display: UILabel!
+    
+    var displayValue: Double {
+        get {
+            return Double(outputController!.display.text!)!
+        }
+        set {
+            outputController!.display.text = String(newValue)
+        }
+    }
     
     private var UserIsInTheMiddleOfTyping = false
     private var decimalUsed = false
     
-    @IBAction private func touchButtons(_ sender: UIButton)  {
-        let digit = sender.currentTitle!
+    func buttonPressed(button: UIButton) {
+        let digit = button.currentTitle!
         if UserIsInTheMiddleOfTyping {
             if digit == "." && decimalUsed == true {
                 return
@@ -46,51 +54,51 @@ class ViewController: UIViewController {
                 decimalUsed = true
             }
             
-            let TextCurrentlyInDisplay = display.text!
-            display.text = TextCurrentlyInDisplay + digit
+            let TextCurrentlyInDisplay = outputController!.display.text!
+            outputController!.display.text = TextCurrentlyInDisplay + digit
         } else {
-            display.text = digit
+            outputController!.display.text = digit
         }
         UserIsInTheMiddleOfTyping = true
     }
     
-    private var displayValue: Double {
-        get {
-            return Double(display.text!)!
-        }
-        set {
-            display.text = String(newValue)
-        }
-    }
-    
-    private var head = CalculatorHead()
-    
-    @IBAction private func performOperation(_ sender: UIButton) {
+    func performingCurrentOperation(operation: UIButton) {
         if UserIsInTheMiddleOfTyping {
             head.digit(value: displayValue)
             UserIsInTheMiddleOfTyping = false
         }
-        head.perform0peration(symbol: sender.currentTitle!)
+        head.perform0peration(symbol: operation.currentTitle!)
         
         /*if sender.currentTitle == "-" {
-            head.binary(operation: .Minus)
-        }*/
+         head.binary(operation: .Minus)
+         }*/
         //displayValue = head.result
         
-        head.result = { (value, error) -> () in //viewDidLoad
-            self.displayValue = value!
+        
+        /*head.result = { (value, error) -> () in //viewDidLoad
+            self.displayValue = value!*/
+        head.result = { (value, error) -> () in
+            if (value != nil) {
+                self.outputController?.outputResult(info: "\(value!)")
+            }
         }
     }
     
-    @IBAction func clear(_ sender: AnyObject) {
+    func clerAll(operand: AnyObject) {
         UserIsInTheMiddleOfTyping = false
         decimalUsed = false
+        print("clear pressed")
         head.clear()
         //displayValue = head.result
         head.result = { (value, error) -> () in
             self.displayValue = value!
         }
-        self.display.text = "0"
+        self.outputController?.display.text = "0"
+
     }
-    
+
+    //end
 }
+    
+
+    

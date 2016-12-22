@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259C5F731E0C26C900EA53BE /* demonButton0.1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 259C5F711E0C26C900EA53BE /* demonButton0.1.jpg */; };
+		259C5F741E0C26C900EA53BE /* glossy-dark-red-icon-button-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = 259C5F721E0C26C900EA53BE /* glossy-dark-red-icon-button-hi.png */; };
+		259C5F761E0C2D4D00EA53BE /* LOTR.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 259C5F751E0C2D4D00EA53BE /* LOTR.jpeg */; };
 		25B412991E0325BF00AA6522 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412971E0325BF00AA6522 /* InputViewController.swift */; };
 		25B4129A1E0325BF00AA6522 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412981E0325BF00AA6522 /* OutputViewController.swift */; };
 		25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		259C5F711E0C26C900EA53BE /* demonButton0.1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demonButton0.1.jpg; sourceTree = SOURCE_ROOT; };
+		259C5F721E0C26C900EA53BE /* glossy-dark-red-icon-button-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glossy-dark-red-icon-button-hi.png"; sourceTree = SOURCE_ROOT; };
+		259C5F751E0C2D4D00EA53BE /* LOTR.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LOTR.jpeg; sourceTree = SOURCE_ROOT; };
 		25B412971E0325BF00AA6522 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		25B412981E0325BF00AA6522 /* OutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		25E8EBA41DF84BED00B81DA4 /* CalcLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		259C5F771E0C2FD700EA53BE /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				259C5F751E0C2D4D00EA53BE /* LOTR.jpeg */,
+				259C5F711E0C26C900EA53BE /* demonButton0.1.jpg */,
+				259C5F721E0C26C900EA53BE /* glossy-dark-red-icon-button-hi.png */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
 		25E8EB9B1DF84BED00B81DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +119,7 @@
 		25E8EBA61DF84BED00B81DA4 /* CalcLite */ = {
 			isa = PBXGroup;
 			children = (
+				259C5F771E0C2FD700EA53BE /* Pictures */,
 				25B412971E0325BF00AA6522 /* InputViewController.swift */,
 				25B412981E0325BF00AA6522 /* OutputViewController.swift */,
 				25E8EBA91DF84BED00B81DA4 /* ViewController.swift */,
@@ -249,9 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259C5F761E0C2D4D00EA53BE /* LOTR.jpeg in Resources */,
 				25E8EBB21DF84BED00B81DA4 /* LaunchScreen.storyboard in Resources */,
 				25E8EBAF1DF84BED00B81DA4 /* Assets.xcassets in Resources */,
+				259C5F741E0C26C900EA53BE /* glossy-dark-red-icon-button-hi.png in Resources */,
 				25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */,
+				259C5F731E0C26C900EA53BE /* demonButton0.1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

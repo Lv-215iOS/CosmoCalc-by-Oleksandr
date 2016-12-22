@@ -21,18 +21,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIZ-K8-lxc">
-                                <rect key="frame" x="0.0" y="20" width="375" height="71"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LOTR.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-1p-jkX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <containerView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s49-T9-Rrv">
+                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <connections>
-                                    <segue destination="Jx5-aL-NXV" kind="embed" identifier="OutputControllerEmbedSegue" id="ajU-GP-Fx4"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s49-T9-Rrv">
-                                <rect key="frame" x="-4" y="99" width="383" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.99029126213592233" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="0.14670721476510068" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="S8A-lL-8CP" kind="embed" identifier="InputControllerEmbedSegue" id="dfW-A6-3tF"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIZ-K8-lxc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Jx5-aL-NXV" kind="embed" identifier="OutputControllerEmbedSegue" id="ajU-GP-Fx4"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -52,227 +59,315 @@
                         <viewControllerLayoutGuide type="bottom" id="0oY-dJ-R7q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OXC-EB-bEz">
-                        <rect key="frame" x="0.0" y="0.0" width="383" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="My6-0W-Z8b">
-                                <rect key="frame" x="16" y="20" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpS-ib-0R3">
+                                <rect key="frame" x="16" y="8" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="/">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="n5t-eE-V2k"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="UAp-UG-BLk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEX-ot-eKF">
-                                <rect key="frame" x="108" y="20" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-Jd-Uc7">
+                                <rect key="frame" x="111" y="8" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="*">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="GWU-6u-VZC"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="gw3-Vp-e5w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GtL-RP-gns">
-                                <rect key="frame" x="200" y="20" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtj-7F-mG4">
+                                <rect key="frame" x="205" y="8" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="-">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="hRb-Gt-2I2"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="0pv-bm-gRw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPj-oh-9W0">
-                                <rect key="frame" x="297" y="20" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFU-Ij-qER">
+                                <rect key="frame" x="299" y="8" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="5kJ-Wu-bem"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="aS1-HB-mIJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYl-nS-f8q">
-                                <rect key="frame" x="16" y="116" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6W-Yg-thx">
+                                <rect key="frame" x="16" y="83" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="7">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="7" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFM-6Q-yEX"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="3Kh-3s-KxM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJL-z7-Nte">
-                                <rect key="frame" x="108" y="116" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-lH-yyE">
+                                <rect key="frame" x="111" y="83" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="8">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="8" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="7Vn-eb-5rW"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Cfp-U8-l8v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhq-rn-Ibd">
-                                <rect key="frame" x="200" y="116" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hff-NO-bEp">
+                                <rect key="frame" x="205" y="83" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="9">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="9" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="SwL-Jf-pMU"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="foo-7b-AGI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOQ-qm-cHd">
-                                <rect key="frame" x="297" y="116" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpR-FW-CBR">
+                                <rect key="frame" x="299" y="83" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="c">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clear:" destination="S8A-lL-8CP" eventType="touchUpInside" id="HXo-Gl-NA1"/>
+                                    <action selector="clear:" destination="S8A-lL-8CP" eventType="touchUpInside" id="kev-4p-JBS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH2-uA-OQb">
-                                <rect key="frame" x="16" y="214" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-Mr-0bd">
+                                <rect key="frame" x="16" y="159" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="4">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="4" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="boD-s8-mfj"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Kh8-Cf-ZdD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIh-8S-b8b">
-                                <rect key="frame" x="108" y="214" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-Uu-JKn">
+                                <rect key="frame" x="111" y="159" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="5">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="5" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="A2C-vO-Ymb"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="ZZI-kM-OQc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-v4-izC">
-                                <rect key="frame" x="200" y="214" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfy-GZ-nXl">
+                                <rect key="frame" x="205" y="159" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="6">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="6" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="DoQ-hn-phk"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="mGE-vs-Zfw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ijh-HZ-0Ws">
-                                <rect key="frame" x="297" y="214" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dd-YP-6ka">
+                                <rect key="frame" x="299" y="159" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="sin">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="aej-SJ-euh"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Ahg-61-WQS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9Z-1k-hYZ">
-                                <rect key="frame" x="16" y="309" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDD-Qj-jRt">
+                                <rect key="frame" x="16" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="1">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="1" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="zaM-tA-1aU"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="pIa-Sd-dN8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGN-wp-Ndl">
-                                <rect key="frame" x="108" y="309" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmR-U8-p9R">
+                                <rect key="frame" x="111" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="2">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="2" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="b2L-Ul-lpC"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="fI5-xv-6f2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMM-sg-gpj">
-                                <rect key="frame" x="200" y="309" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkR-qU-oLZ">
+                                <rect key="frame" x="205" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.36103723399999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="3">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="3" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Qa0-dZ-X2V"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="iTI-cR-3OJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V61-GS-MIR">
-                                <rect key="frame" x="297" y="309" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sqrt">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Ttg-bw-EfG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jm-3Q-4DE">
-                                <rect key="frame" x="16" y="405" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mvp-8j-TkE">
+                                <rect key="frame" x="299" y="491" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="0">
+                                <state key="normal" title="√">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="XqB-Wc-Xe2"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="OtL-CB-1hY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-UU-nhK">
-                                <rect key="frame" x="108" y="405" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-ke-b6D">
+                                <rect key="frame" x="112" y="319" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title=".">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="tQ8-AF-oDq"/>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="khJ-cy-AHi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH2-m1-XC8">
-                                <rect key="frame" x="200" y="405" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edc-ew-XZd">
+                                <rect key="frame" x="206" y="319" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.063853586546754174" green="0.27646614513300044" blue="0.82306640624999994" alpha="0.65973678691275173" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.063853586549999994" green="0.2764661451" blue="0.82306640620000004" alpha="0.65973678690000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="=">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="SFM-gB-4rF"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="MiY-ah-vtO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Std-8l-d3M">
-                                <rect key="frame" x="297" y="405" width="70" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNQ-BK-NP1">
+                                <rect key="frame" x="299" y="239" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="cos">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="g6o-pg-bRh"/>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="aS0-oz-msU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDL-Ep-LtT">
+                                <rect key="frame" x="299" y="319" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="tg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="2fn-Ef-vXK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-Qu-Ih7">
+                                <rect key="frame" x="299" y="399" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="ctg">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="x2s-lb-WR3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVb-Gz-4fy">
+                                <rect key="frame" x="206" y="399" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="^">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="tCU-4a-unt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONg-Dh-Udx">
+                                <rect key="frame" x="111" y="399" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="±">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Qsk-LY-df1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMf-H3-dcC">
+                                <rect key="frame" x="17" y="399" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="π">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="3f5-zl-FhL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYd-kR-Ev4">
+                                <rect key="frame" x="16" y="491" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="e">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="HhD-T3-af1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X77-R2-aA3">
+                                <rect key="frame" x="111" y="491" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="FnS-hA-ZQG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOf-3q-HsJ">
+                                <rect key="frame" x="16" y="319" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33767642390000002" green="0.890768161" blue="0.38241475029999999" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="0" backgroundImage="demonButton0.1.jpg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="HY2-rW-uCM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8p-VY-cEv">
+                                <rect key="frame" x="205" y="491" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35715947749999999" green="0.49835546600000002" blue="0.5" alpha="0.23661901599999999" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="log">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Eum-UT-VxW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,16 +387,16 @@
                         <viewControllerLayoutGuide type="bottom" id="BfY-oy-yOn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fLw-eo-WL1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="tSF-ql-pBi">
-                                <rect key="frame" x="16" y="17" width="343" height="36"/>
+                                <rect key="frame" x="16" y="8" width="343" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68851281978312906" green="0.68427347448863729" blue="0.78017578124999998" alpha="0.080563129194630878" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <color key="highlightedColor" red="0.41279723052251616" green="0.78017578124999998" blue="0.72095618785006454" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,4 +410,9 @@
             <point key="canvasLocation" x="524" y="-207"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LOTR.jpeg" width="1920" height="1080"/>
+        <image name="demonButton0.1.jpg" width="800" height="800"/>
+    </resources>
+    <color key="tintColor" red="0.87285082152868176" green="0.89541691541671753" blue="0.71700576924601334" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

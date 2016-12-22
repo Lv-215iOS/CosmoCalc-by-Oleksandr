@@ -14,6 +14,7 @@ enum binaryOperation: String {
     case Minus = "-"
     case Mul = "*"
     case Div = "/"
+    case Pow = "^"
 }
 
 enum utilityOperation: String {
@@ -22,130 +23,92 @@ enum utilityOperation: String {
 }
 
 enum unaryOperation: String {
+    case Sign = "±"
     case Cos = "cos"
-    case Sqrt = "Sqrt"
+    case Sqrt = "√"
     case Sin = "sin"
+    case Tg = "tg"
+    case Ctg = "ctg"
+    case Pers = "%"
+    case Log = "log"
+}
+
+enum constantValues: String {
+    case Pi = "π"
+    case Exp = "e"
 }
 
 protocol CalcBrainInterface {
     func digit(value: Double)
     func binary(operation: binaryOperation)
     func unary(operation: unaryOperation)
+    func utility(operation: utilityOperation)
     var result: ((Double?, Error?) -> ())? {get set}
-    //var result: Double {get}
 }
 
 class CalculatorHead: CalcBrainInterface
 {
     
-    //private var accumulator = 0.0
-    //let objCalcHead = CalculatorHead()
-    
-    var operandOne: Double?
-    var operandTwo: Double?
-    var value: Double?
+    var accumulatorValue: Double?
     var temp: String? = nil
     
     func digit(value: Double) {
-        if operandOne == nil {
-            operandOne = value
-            print("Now we have Op1", operandOne!)
-        } else if operandTwo == nil {
-            operandTwo = value
-            print("Now we have Op2", operandTwo!)
-        }
+        accumulatorValue = value
     }
     
+    var result: ((Double?, Error?)->())? = nil
     
-    func binary(operation: binaryOperation) {
-        switch operation {
-            /*case .Plus: Operation.BinaryOperation({$0 * $1})
-             case .Minus: Operation.BinaryOperation({$0 - $1})
-             case .Div: Operation.BinaryOperation({$0 / $1})
-             case .Mul: Operation.BinaryOperation({$0 * $1})
-             */
-        case .Plus:
-            value = (operandOne ?? 0.0) + (operandTwo ?? 0.0)
-            temp = operation.rawValue
-            print("Plus")
-        case .Minus:
-            value = (operandOne ?? 0.0) - (operandTwo ?? 0.0)
-            temp = operation.rawValue
-            print("Minus")
-            //print("result of min = ", value!)
-
-        case .Mul:
-            value = (operandOne ?? 0.0) *  (operandTwo ?? 0.0)
-            //result?(value, nil)
-            temp = operation.rawValue
-            print("Multiply")
-        case .Div:
-            value = (operandOne ?? 0.0) /  (operandTwo ?? 0.0)
-            temp = operation.rawValue
-            print("Division")
-        }
-    }
-
-    func unary(operation: unaryOperation)  {
-        switch operation {
-            /*case .Cos: Operation.Constant(M_PI)
-             case .Sqrt: Operation.Constant(M_E)*/
-        case .Sqrt:
-            value = (sqrt(operandOne ?? 0.0 ))
-            temp = operation.rawValue
-            print("Squre root = ", value!)
-        case .Cos:
-            value = (cos(operandOne ?? 0.0 ))
-            temp = operation.rawValue
-            print("Cos = ", value!)
-        case .Sin:
-            value = (sin(operandOne ?? 0.0 ))
-            temp = operation.rawValue
-            print("Sin = ", value!)
-        }
-    }
     func utility(operation: utilityOperation) {
-        switch operation {
-        //case .Dot:
-        case .Equal: //Operation.Equals
-            print("Equal")
-            switch temp! {
-            case "-" :
-                operandOne = operandOne! - operandTwo!
-                operandTwo = nil
-            case "+" :
-                operandOne = operandOne! + operandTwo!
-                operandTwo = nil
-            case "*" :
-                operandOne = operandOne! * operandTwo!
-                operandTwo = nil
-            case "/" :
-                operandOne = operandOne! / operandTwo!
-                operandTwo = nil
-            case "cos":
-                operandOne = cos(operandOne!)
-            case "Sqrt":
-                operandOne = sqrt(operandOne!)
-            case "sin":
-                operandOne = sin(operandOne!)
+        
+        if let operationSymbol = operations[operation.rawValue] {
+            switch operationSymbol {
+            case .Equals:
+                executePendingBinaryOperation()
+                result?(accumulatorValue, nil)
             default:
                 break
             }
-            result?(operandOne, nil)
-            //print(" equal = ", value!)
-        default:
-            break
         }
     }
     
+    func unary(operation: unaryOperation) {
+        if let operationSymbol = operations[operation.rawValue] {
+            switch operationSymbol {
+            case .UnaryOperation(let function):
+                accumulatorValue = function(accumulatorValue!)
+                result?(accumulatorValue, nil)
+            default:
+                break
+            }
+        }
+    }
+    
+    func binary(operation: binaryOperation) {
+        if let operationSymbol = operations[operation.rawValue] {
+            switch operationSymbol {
+            case .BinaryOperation(let function):
+                executePendingBinaryOperation()
+                pending = PendingBinaryOperationInfo(binaryFunction: function, fistOperand: accumulatorValue!)
+            default:
+                break
+            }
+        }
+    }
+    
+    func constants(operation: constantValues) {
+        if let operationSymbol = operations[operation.rawValue] {
+            switch operationSymbol {
+            case .Constant(let value):
+                accumulatorValue = value
+                result?(accumulatorValue, nil)
+            default:
+                break
+            }
+        }
+    }
+    
+    
     func perform0peration(symbol: String) {
-        /*switch symbol {
-        case "-" :
-            let possibleBinary = binaryOperation(rawValue: symbol)
-            self.binary(operation: possibleBinary!)
-        default:
-            break
-        }*/
         if binaryOperation(rawValue: symbol) != nil {
             let possibleBinary = binaryOperation(rawValue: symbol)
             self.binary(operation: possibleBinary!)
@@ -157,79 +120,65 @@ class CalculatorHead: CalcBrainInterface
         } else if utilityOperation(rawValue: symbol) != nil {
             let possibleUtility = utilityOperation(rawValue: symbol)
             self.utility(operation: possibleUtility!)
+        } else if constantValues(rawValue: symbol) != nil {
+            let possibleConstant = constantValues(rawValue: symbol)
+            self.constants(operation: possibleConstant!)
         }
         
     }
     
     func clear() {
-        value = 0.0
-        operandOne = nil
-        operandTwo = nil
+        accumulatorValue = 0.0
     }
     
-    var result: ((Double?, Error?)->())? = nil
-    /*
-     func set0perand(operand: Double) {
-        accumulator = operand
-     }
-     private var operations: Dictionary <String, Operation> = [
+    
+    
+    
+    
+    //////////////////////////////////////////////
+    
+    
+    private var operations: Dictionary <String, Operation> = [
         "π" : Operation.Constant(M_PI),
         "e" : Operation.Constant(M_E),
+        
         "±" : Operation.UnaryOperation({ -$0}),
-        "Sqrt" : Operation.UnaryOperation(sqrt),
+        "%" : Operation.UnaryOperation({$0 / 100}),
+        "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
-        "×": Operation.BinaryOperation({ $0 * $1 }),
-        "÷": Operation.BinaryOperation({ $0 / $1 }),
+        "sin": Operation.UnaryOperation(sin),
+        "tg" : Operation.UnaryOperation(tan),
+        "ctg": Operation.UnaryOperation({1 / tan($0)}),
+        "log": Operation.UnaryOperation(log2),
+        
+        "*": Operation.BinaryOperation({ $0 * $1 }),
+        "/": Operation.BinaryOperation({ $0 / $1 }),
         "+": Operation.BinaryOperation({ $0 + $1 }),
-        "−": Operation.BinaryOperation({ $0 - $1 }),
+        "-": Operation.BinaryOperation({ $0 - $1 }),
+        "^": Operation.BinaryOperation({pow($0, $1)}),
         "=": Operation.Equals
-     ]*/
-     /*private enum Operation {
-        case Constant(Double?)
-        case UnaryOperation((Double?) -> Double?)
-        case BinaryOperation((Double?, Double?) -> Double?)
+    ]
+    private enum Operation {
+        case Constant(Double)
+        case UnaryOperation((Double) -> Double)
+        case BinaryOperation((Double, Double) -> Double)
         case Equals
-     }*/
+    }
     
-    /*func perform0peration(symbol: String) {
-        if let operation = operations[symbol]{
-        switch operation{
-            case .Constant(let value):
-                accumulator = value
-            case .UnaryOperation(let function):
-                accumulator = function(accumulator)
-            case .BinaryOperation(let function):
-                executePendingBinaryOperation()
-                pending = PendingBinaryOperationInfo(binaryFunction: function, fistOperand: accumulator)
-            case .Equals:
-            executePendingBinaryOperation()
-            }
-        }
-     }*/
-    
-    /*
-     private func executePendingBinaryOperation()
-     {
+    private func executePendingBinaryOperation()
+    {
         if pending != nil {
-        accumulator = pending!.binaryFunction(pending!.fistOperand, accumulator)
-        pending = nil
-     }
-     }
-     
-     private var pending: PendingBinaryOperationInfo?
-     
-     
-     private struct PendingBinaryOperationInfo{
+            accumulatorValue = pending!.binaryFunction(pending!.fistOperand, accumulatorValue!)
+            pending = nil
+        }
+    }
+    
+    private var pending: PendingBinaryOperationInfo?
+    
+    private struct PendingBinaryOperationInfo{
         var binaryFunction: (Double, Double) -> Double
         var fistOperand: Double
-     }
-     
-     var result: Double {
-        get {
-        return accumulator
-        }
-     }*/
-    
+    }
 }
 
 

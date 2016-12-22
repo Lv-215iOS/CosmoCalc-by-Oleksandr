@@ -47,9 +47,10 @@ class ViewController: UIViewController, UITableViewDelegate{
     
     func buttonPressed(button: UIButton) {
         let digit = button.currentTitle!
+        
         if UserIsInTheMiddleOfTyping {
             if digit == "." && decimalUsed == true {
-                return
+                decimalUsed = false
             } else if digit == "." && decimalUsed == false {
                 decimalUsed = true
             }

@@ -10,13 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate{
     
-    //private var head = CalculatorHead()
-    
     var outputController: OutputViewController? = nil
     var inputController: InputViewController? = nil
     private var head = CalculatorHead()
-    
-    //private var UserIsInTheMiddleOfTyping = false
     
     override func viewDidLoad() {
         super.viewDidLoad() // Do any additional setup after loading the view
@@ -70,14 +66,6 @@ class ViewController: UIViewController, UITableViewDelegate{
         }
         head.perform0peration(symbol: operation.currentTitle!)
         
-        /*if sender.currentTitle == "-" {
-         head.binary(operation: .Minus)
-         }*/
-        //displayValue = head.result
-        
-        
-        /*head.result = { (value, error) -> () in //viewDidLoad
-            self.displayValue = value!*/
         head.result = { (value, error) -> () in
             if (value != nil) {
                 self.outputController?.outputResult(info: "\(value!)")
@@ -98,7 +86,6 @@ class ViewController: UIViewController, UITableViewDelegate{
 
     }
 
-    //end
 }
     
 

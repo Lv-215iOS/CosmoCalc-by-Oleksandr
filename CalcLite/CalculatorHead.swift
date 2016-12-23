@@ -120,6 +120,7 @@ class CalculatorHead: CalcBrainInterface
         } else if utilityOperation(rawValue: symbol) != nil {
             let possibleUtility = utilityOperation(rawValue: symbol)
             self.utility(operation: possibleUtility!)
+            
         } else if constantValues(rawValue: symbol) != nil {
             let possibleConstant = constantValues(rawValue: symbol)
             self.constants(operation: possibleConstant!)
@@ -130,13 +131,6 @@ class CalculatorHead: CalcBrainInterface
     func clear() {
         accumulatorValue = 0.0
     }
-    
-    
-    
-    
-    
-    //////////////////////////////////////////////
-    
     
     private var operations: Dictionary <String, Operation> = [
         "π" : Operation.Constant(M_PI),

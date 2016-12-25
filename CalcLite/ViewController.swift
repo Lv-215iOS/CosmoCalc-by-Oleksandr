@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITableViewDelegate{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OutputControllerEmbedSegue" {
             outputController = segue.destination as? OutputViewController
-            outputController?.mainVC = self
         } else if segue.identifier == "InputControllerEmbedSegue" {
             inputController = segue.destination as? InputViewController
             inputController?.mainVC = self
@@ -38,13 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate{
         }
     }
     
-    private var UserIsInTheMiddleOfTyping = false
+    private var userIsInTheMiddleOfTyping = false
     private var decimalUsed = false
     
     func buttonPressed(button: UIButton) {
         let digit = button.currentTitle!
         
-        if UserIsInTheMiddleOfTyping {
+        if userIsInTheMiddleOfTyping {
             if digit == "." && decimalUsed == true {
                 decimalUsed = false
             } else if digit == "." && decimalUsed == false {
@@ -56,13 +55,13 @@ class ViewController: UIViewController, UITableViewDelegate{
         } else {
             outputController!.display.text = digit
         }
-        UserIsInTheMiddleOfTyping = true
+        userIsInTheMiddleOfTyping = true
     }
     
     func performingCurrentOperation(operation: UIButton) {
-        if UserIsInTheMiddleOfTyping {
+        if userIsInTheMiddleOfTyping {
             head.digit(value: displayValue)
-            UserIsInTheMiddleOfTyping = false
+            userIsInTheMiddleOfTyping = false
         }
         head.perform0peration(symbol: operation.currentTitle!)
         
@@ -74,18 +73,15 @@ class ViewController: UIViewController, UITableViewDelegate{
     }
     
     func clerAll(operand: AnyObject) {
-        UserIsInTheMiddleOfTyping = false
+        userIsInTheMiddleOfTyping = false
         decimalUsed = false
-        print("clear pressed")
         head.clear()
-        //displayValue = head.result
+        
         head.result = { (value, error) -> () in
             self.displayValue = value!
         }
         self.outputController?.display.text = "0"
-
     }
-
 }
     
 

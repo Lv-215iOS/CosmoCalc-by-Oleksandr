@@ -18,12 +18,6 @@ class InputViewController: UIViewController, InputInterface {
     
     var buttonDidPress: ((String) -> ())? = nil
     
-    
-    
-    private var UserIsInTheMiddleOfTyping = false
-    private var decimalUsed = false
-    
-    
     @IBAction func touchButtons(_ sender: UIButton) {
         mainVC?.buttonPressed(button: sender)
     }

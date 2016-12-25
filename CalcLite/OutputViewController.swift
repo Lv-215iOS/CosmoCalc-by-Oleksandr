@@ -13,22 +13,8 @@ protocol OutputInterface {
 }
 
 class OutputViewController: UIViewController, OutputInterface{
-
     @IBOutlet weak var display: UILabel!
-
-    
-    var mainVC: ViewController? = nil
-    
     func outputResult(info: String) {
         display.text = info
     }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad() // Do any additional setup after loading the view.
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning() // Dispose of any resources that can be recreated.
-    }
-
 }

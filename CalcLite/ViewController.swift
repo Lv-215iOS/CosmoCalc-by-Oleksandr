@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDelegate {
     
     var outputController: OutputViewController? = nil
     var inputController: InputViewController? = nil
     private var head = CalculatorHead()
     
     override func viewDidLoad() {
-        super.viewDidLoad() // Do any additional setup after loading the view
-        
+        // Do any additional setup after loading the view
+        super.viewDidLoad()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

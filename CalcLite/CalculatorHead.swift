@@ -59,7 +59,6 @@ class CalculatorHead: CalcBrainInterface
     var result: ((Double?, Error?)->())? = nil
     
     func utility(operation: utilityOperation) {
-        
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .Equals:
@@ -106,7 +105,6 @@ class CalculatorHead: CalcBrainInterface
             }
         }
     }
-    
     
     func perform0peration(symbol: String) {
         if binaryOperation(rawValue: symbol) != nil {

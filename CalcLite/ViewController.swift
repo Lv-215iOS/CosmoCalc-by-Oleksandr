@@ -46,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         if userIsInTheMiddleOfTyping {
             if digit == "." && decimalUsed == true {
                 decimalUsed = false
+                //return
             } else if digit == "." && decimalUsed == false {
                 decimalUsed = true
             }

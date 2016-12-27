@@ -13,7 +13,7 @@ protocol InputInterface {
 }
 
 class InputViewController: UIViewController, InputInterface {
-    
+    // implemnt input  controller throught the protocol InputInterface
     var mainVC: ViewController? = nil
     
     var buttonDidPress: ((String) -> ())? = nil

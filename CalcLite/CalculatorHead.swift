@@ -9,7 +9,7 @@
 
 import Foundation
 
-enum binaryOperation: String {
+enum BinaryOperation: String {
     case Plus = "+"
     case Minus = "-"
     case Mul = "*"
@@ -17,12 +17,12 @@ enum binaryOperation: String {
     case Pow = "^"
 }
 
-enum utilityOperation: String {
+enum UtilityOperation: String {
     case Dot = "."
     case Equal = "="
 }
 
-enum unaryOperation: String {
+enum UnaryOperation: String {
     case Sign = "±"
     case Cos = "cos"
     case Sqrt = "√"
@@ -33,23 +33,23 @@ enum unaryOperation: String {
     case Log = "log"
 }
 
-enum constantValues: String {
+enum ConstantValues: String {
     case Pi = "π"
     case Exp = "e"
 }
 
 protocol CalcBrainInterface {
     func digit(value: Double)
-    func binary(operation: binaryOperation)
-    func unary(operation: unaryOperation)
-    func utility(operation: utilityOperation)
+    func binary(operation: BinaryOperation)
+    func unary(operation: UnaryOperation)
+    func utility(operation: UtilityOperation)
     var result: ((Double?, Error?) -> ())? {get set}
 }
 
 class CalculatorHead: CalcBrainInterface
 {
     
-    var accumulatorValue: Double?
+    var accumulatorValue: Double? = 0.0
     var temp: String? = nil
     
     func digit(value: Double) {
@@ -58,7 +58,7 @@ class CalculatorHead: CalcBrainInterface
     
     var result: ((Double?, Error?)->())? = nil
     
-    func utility(operation: utilityOperation) {
+    func utility(operation: UtilityOperation) {
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .Equals:
@@ -70,7 +70,7 @@ class CalculatorHead: CalcBrainInterface
         }
     }
     
-    func unary(operation: unaryOperation) {
+    func unary(operation: UnaryOperation) {
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .UnaryOperation(let function):
@@ -82,7 +82,7 @@ class CalculatorHead: CalcBrainInterface
         }
     }
     
-    func binary(operation: binaryOperation) {
+    func binary(operation: BinaryOperation) {
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .BinaryOperation(let function):
@@ -94,7 +94,7 @@ class CalculatorHead: CalcBrainInterface
         }
     }
     
-    func constants(operation: constantValues) {
+    func constants(operation: ConstantValues) {
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .Constant(let value):
@@ -107,20 +107,20 @@ class CalculatorHead: CalcBrainInterface
     }
     
     func perform0peration(symbol: String) {
-        if binaryOperation(rawValue: symbol) != nil {
-            let possibleBinary = binaryOperation(rawValue: symbol)
+        if BinaryOperation(rawValue: symbol) != nil {
+            let possibleBinary = BinaryOperation(rawValue: symbol)
             self.binary(operation: possibleBinary!)
             
-        } else if unaryOperation(rawValue: symbol) != nil {
-            let possibleUnary = unaryOperation(rawValue: symbol)
+        } else if UnaryOperation(rawValue: symbol) != nil {
+            let possibleUnary = UnaryOperation(rawValue: symbol)
             self.unary(operation: possibleUnary!)
             
-        } else if utilityOperation(rawValue: symbol) != nil {
-            let possibleUtility = utilityOperation(rawValue: symbol)
+        } else if UtilityOperation(rawValue: symbol) != nil {
+            let possibleUtility = UtilityOperation(rawValue: symbol)
             self.utility(operation: possibleUtility!)
             
-        } else if constantValues(rawValue: symbol) != nil {
-            let possibleConstant = constantValues(rawValue: symbol)
+        } else if ConstantValues(rawValue: symbol) != nil {
+            let possibleConstant = ConstantValues(rawValue: symbol)
             self.constants(operation: possibleConstant!)
         }
         
@@ -162,12 +162,13 @@ class CalculatorHead: CalcBrainInterface
         if pending != nil {
             accumulatorValue = pending!.binaryFunction(pending!.fistOperand, accumulatorValue!)
             pending = nil
+            
         }
     }
     
     private var pending: PendingBinaryOperationInfo?
     
-    private struct PendingBinaryOperationInfo{
+    private struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var fistOperand: Double
     }

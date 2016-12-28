@@ -13,20 +13,11 @@ protocol InputInterface {
 }
 
 class InputViewController: UIViewController, InputInterface {
-    var mainVC: ViewController? = nil
     
     var buttonDidPress: ((String) -> ())? = nil
-    
-    @IBAction func touchButtons(_ sender: UIButton) {
-        mainVC?.buttonPressed(button: sender)
-    }
-    
-    @IBAction func performOperation(_ sender: UIButton) {
-        mainVC?.performingCurrentOperation(operation: sender)
-    }
 
-    @IBAction func clear(_ sender: AnyObject) {
-        mainVC?.clerAll(operand: sender)
+    @IBAction func buttonDidPress(_ sender: UIButton) {
+        buttonDidPress?(sender.currentTitle!)
     }
 }
     

@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOTR.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-1p-jkX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmo1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-1p-jkX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s49-T9-Rrv">
@@ -88,12 +88,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="7" backgroundImage="circle.png">
+                                <state key="normal" title="7" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="vcs-lH-8eu"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="SE7-qD-ExA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-Mr-0bd">
@@ -105,12 +105,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="4" backgroundImage="circle.png">
+                                <state key="normal" title="4" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="aDc-vE-YIQ"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="35w-Yq-hlF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDD-Qj-jRt">
@@ -122,12 +122,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="1" backgroundImage="circle.png">
+                                <state key="normal" title="1" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="xiE-iU-8AU"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="C2x-SN-UOu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOf-3q-HsJ">
@@ -139,12 +139,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="0" backgroundImage="circle.png">
+                                <state key="normal" title="0" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Mgk-MT-HGo"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="QjK-Ju-Kgf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-lH-yyE">
@@ -156,12 +156,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="8" backgroundImage="circle.png">
+                                <state key="normal" title="8" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="6Ad-mn-FaT"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Ipq-Xr-1u2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yT8-Uu-JKn">
@@ -173,12 +173,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="5" backgroundImage="circle.png">
+                                <state key="normal" title="5" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="9Hq-7a-rGG"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="1bW-fZ-u6h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmR-U8-p9R">
@@ -190,12 +190,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="2" backgroundImage="circle.png">
+                                <state key="normal" title="2" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="orM-ND-p5n"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="vlm-vr-WJV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxU-Eo-Wfe">
@@ -207,12 +207,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="/" backgroundImage="circle2.0.png">
+                                <state key="normal" title="/" backgroundImage="circleBinary.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="hK3-VX-rt5"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Uh9-6r-fFc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E28-Pb-IX4">
@@ -224,12 +224,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="+" backgroundImage="circle2.0.png">
+                                <state key="normal" title="+" backgroundImage="circleBinary.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="arZ-2O-gSV"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="ebz-t1-JCZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEm-Yt-cFh">
@@ -241,12 +241,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="*" backgroundImage="circle2.0.png">
+                                <state key="normal" title="*" backgroundImage="circleBinary.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Tex-RC-MTN"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="QbV-Ci-bqo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-X7-M3B">
@@ -258,12 +258,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="sin" backgroundImage="circle3.png">
+                                <state key="normal" title="sin" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="b9A-bf-512"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="H39-gf-cCg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woT-Dz-4X0">
@@ -275,12 +275,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="cos" backgroundImage="circle3.png">
+                                <state key="normal" title="cos" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="OVm-de-Jq3"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="XJE-ZH-7kR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeT-K7-HWF">
@@ -292,12 +292,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="tg" backgroundImage="circle3.png">
+                                <state key="normal" title="tg" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="5WV-Ww-6Gt"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="wQk-mn-fTm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAW-aC-yMp">
@@ -309,12 +309,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="√" backgroundImage="circle3.png">
+                                <state key="normal" title="√" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="SM6-aB-y4l"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="OD0-MW-gK0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4R-eT-u5r">
@@ -326,12 +326,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="π" backgroundImage="circle3.png">
+                                <state key="normal" title="π" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="6rg-fQ-VxR"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="KaQ-8h-uez"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-9H-1xh">
@@ -343,12 +343,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="±" backgroundImage="circle3.png">
+                                <state key="normal" title="±" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Co2-yq-mxy"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="yXS-MO-rwt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLh-JX-Ygz">
@@ -360,16 +360,16 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="e" backgroundImage="circle3.png">
+                                <state key="normal" title="e" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="m1p-Bh-FHW"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="ACQ-0c-TE2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e5-cd-h9h">
-                                <rect key="frame" x="101" y="481.5" width="70" height="70"/>
+                                <rect key="frame" x="101" y="482" width="70" height="70"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="BLW-Mm-mcA"/>
@@ -377,12 +377,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="%" backgroundImage="circle3.png">
+                                <state key="normal" title="%" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="lQw-dZ-aHD"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="mFm-IB-IFl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhD-UW-YvM">
@@ -394,12 +394,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="." backgroundImage="circle.png">
+                                <state key="normal" title="." backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="bDw-jg-JgF"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="5WU-9i-pMP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2V-Or-fEP">
@@ -411,12 +411,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="c" backgroundImage="circle3.2.png">
+                                <state key="normal" title="c" backgroundImage="circleClear.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clear:" destination="S8A-lL-8CP" eventType="touchUpInside" id="BA0-Bz-GIj"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="tsf-jW-ojm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hff-NO-bEp">
@@ -428,12 +428,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="9" backgroundImage="circle.png">
+                                <state key="normal" title="9" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="nG3-9I-zYY"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="PFL-w6-07D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfy-GZ-nXl">
@@ -445,12 +445,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="6" backgroundImage="circle.png">
+                                <state key="normal" title="6" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="LTa-PM-d7u"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="PFT-5A-iZN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkR-qU-oLZ">
@@ -462,12 +462,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="3" backgroundImage="circle.png">
+                                <state key="normal" title="3" backgroundImage="circleDigit.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="touchButtons:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Tet-Hf-dbi"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="vvn-1A-PYB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-Bp-cC5">
@@ -479,12 +479,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="-" backgroundImage="circle2.0.png">
+                                <state key="normal" title="-" backgroundImage="circleBinary.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="xew-uE-3ty"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Cll-tJ-8zg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX4-dE-9Ow">
@@ -496,12 +496,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="log" backgroundImage="circle3.png">
+                                <state key="normal" title="log" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="y4R-8Y-yGW"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="Xz6-ZU-Pkz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ise-zx-j3F">
@@ -513,12 +513,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="^" backgroundImage="circle3.png">
+                                <state key="normal" title="^" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="rM0-6f-CAE"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="W01-0e-4Kt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpG-bP-2Ud">
@@ -530,12 +530,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="=" backgroundImage="circle3.1.png">
+                                <state key="normal" title="=" backgroundImage="circleEqual.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="9Mq-L5-gf6"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="2cY-yc-L0g"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-8D-Vkh">
@@ -547,12 +547,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="ctg" backgroundImage="circle3.png">
+                                <state key="normal" title="ctg" backgroundImage="circleOperations.png">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="performOperation:" destination="S8A-lL-8CP" eventType="touchUpInside" id="wVS-1I-85V"/>
+                                    <action selector="buttonDidPress:" destination="S8A-lL-8CP" eventType="touchUpInside" id="UJE-su-VA0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -726,12 +726,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LOTR.jpeg" width="1920" height="1080"/>
-        <image name="circle.png" width="570" height="570"/>
-        <image name="circle2.0.png" width="421" height="421"/>
-        <image name="circle3.1.png" width="422" height="422"/>
-        <image name="circle3.2.png" width="422" height="422"/>
-        <image name="circle3.png" width="366" height="366"/>
+        <image name="circleBinary.png" width="113" height="113"/>
+        <image name="circleClear.png" width="172" height="172"/>
+        <image name="circleDigit.png" width="99" height="99"/>
+        <image name="circleEqual.png" width="306" height="306"/>
+        <image name="circleOperations.png" width="329" height="329"/>
+        <image name="cosmo1.jpg" width="640" height="1136"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

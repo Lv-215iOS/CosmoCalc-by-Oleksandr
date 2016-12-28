@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     private var head = CalculatorHead()
     
     override func viewDidLoad() {
-        // Do any additional setup after loading the view
+        // Do any additional setup after loading the view.
         super.viewDidLoad()
     }
     
@@ -24,7 +24,9 @@ class ViewController: UIViewController, UITableViewDelegate {
             outputController = segue.destination as? OutputViewController
         } else if segue.identifier == "InputControllerEmbedSegue" {
             inputController = segue.destination as? InputViewController
-            inputController?.mainVC = self
+            inputController?.buttonDidPress = { [unowned self] operation in
+                self.buttonDidPress(operation: operation)
+            }
         }
     }
     
@@ -37,19 +39,19 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    private var userIsInTheMiddleOfTyping = false
-    private var decimalUsed = false
+    var userIsInTheMiddleOfTyping = false
+    var decimalUsed = false
     
-    func buttonPressed(button: UIButton) {
-        let digit = button.currentTitle!
+    func buttonPressed(button: String) {
+        let digit = button
         
         if userIsInTheMiddleOfTyping {
-            if digit == "." && decimalUsed == true {
-                decimalUsed = false
-                //return
-            } else if digit == "." && decimalUsed == false {
-                decimalUsed = true
-            }
+//            if digit == "." && decimalUsed == true {
+//                decimalUsed = false
+//                //return
+//            } else if digit == "." && decimalUsed == false {
+//                decimalUsed = true
+//            }
             
             let TextCurrentlyInDisplay = outputController!.display.text!
             outputController!.display.text = TextCurrentlyInDisplay + digit
@@ -59,12 +61,13 @@ class ViewController: UIViewController, UITableViewDelegate {
         userIsInTheMiddleOfTyping = true
     }
     
-    func performingCurrentOperation(operation: UIButton) {
+    func performingCurrentOperation(operation: String) {
         if userIsInTheMiddleOfTyping {
             head.digit(value: displayValue)
             userIsInTheMiddleOfTyping = false
         }
-        head.perform0peration(symbol: operation.currentTitle!)
+        decimalUsed = false
+        head.perform0peration(symbol: operation)
         
         head.result = { (value, error) -> () in
             if (value != nil) {
@@ -73,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func clerAll(operand: AnyObject) {
+    func clerButtonPressed(operation: String) {
         userIsInTheMiddleOfTyping = false
         decimalUsed = false
         head.clear()
@@ -82,6 +85,60 @@ class ViewController: UIViewController, UITableViewDelegate {
             self.displayValue = value!
         }
         self.outputController?.display.text = "0"
+    }
+    
+    func dotButtonPressed(operation: String) {
+        if !decimalUsed && userIsInTheMiddleOfTyping {
+            outputController!.display.text = String(outputController!.display.text! + ".")
+            decimalUsed = true
+        } else if !decimalUsed && !userIsInTheMiddleOfTyping {
+            outputController!.display.text = String("0.")
+            decimalUsed = true
+            userIsInTheMiddleOfTyping = true
+        }
+    }
+    
+
+    
+    func buttonDidPress(operation: String) {
+        switch operation {
+        case "1": buttonPressed(button: operation)
+        case "2": buttonPressed(button: operation)
+        case "3": buttonPressed(button: operation)
+        case "4": buttonPressed(button: operation)
+        case "5": buttonPressed(button: operation)
+        case "6": buttonPressed(button: operation)
+        case "7": buttonPressed(button: operation)
+        case "8": buttonPressed(button: operation)
+        case "9": buttonPressed(button: operation)
+        case "0": buttonPressed(button: operation)
+            
+        case ".": dotButtonPressed(operation: operation)
+            
+        case "π": performingCurrentOperation(operation: operation)
+        case "e": performingCurrentOperation(operation: operation)
+            
+        case "+": performingCurrentOperation(operation: operation)
+        case "-": performingCurrentOperation(operation: operation)
+        case "/": performingCurrentOperation(operation: operation)
+        case "*": performingCurrentOperation(operation: operation)
+            
+        case "√": performingCurrentOperation(operation: operation)
+        case "^": performingCurrentOperation(operation: operation)
+        case "log": performingCurrentOperation(operation: operation)
+        case "cos": performingCurrentOperation(operation: operation)
+        case "sin": performingCurrentOperation(operation: operation)
+        case "tg": performingCurrentOperation(operation: operation)
+        case "ctg": performingCurrentOperation(operation: operation)
+        case "%": performingCurrentOperation(operation: operation)
+        case "±": performingCurrentOperation(operation: operation)
+        case "=": performingCurrentOperation(operation: operation)
+            
+        case "c": clerButtonPressed(operation: operation)
+            
+        default:
+            break
+        }
     }
 }
     

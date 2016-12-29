@@ -50,7 +50,8 @@ class CalculatorHead: CalcBrainInterface
 {
     
     var accumulatorValue: Double? = 0.0
-    var temp: String? = nil
+    var tempValue: Double? = 0.0
+    var operationSavedSymbol: BinaryOperation?
     
     func digit(value: Double) {
         accumulatorValue = value
@@ -62,6 +63,11 @@ class CalculatorHead: CalcBrainInterface
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .Equals:
+//                if operationSavedSymbol != nil {
+//                    //self.binary(operation: operationSavedSymbol!)
+//                    executePendingBinaryOperation()
+//                    result?(accumulatorValue, nil)
+//                }
                 executePendingBinaryOperation()
                 result?(accumulatorValue, nil)
             default:
@@ -83,6 +89,7 @@ class CalculatorHead: CalcBrainInterface
     }
     
     func binary(operation: BinaryOperation) {
+        saveBinaryOperationSymbol(symbol: operation.rawValue)
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .BinaryOperation(let function):
@@ -106,6 +113,17 @@ class CalculatorHead: CalcBrainInterface
         }
     }
     
+    func saveBinaryOperationSymbol(symbol: String) {
+        switch symbol {
+        case "+": operationSavedSymbol = BinaryOperation.Plus
+        case "-": operationSavedSymbol = BinaryOperation.Minus
+        case "*": operationSavedSymbol = BinaryOperation.Mul
+        case "/": operationSavedSymbol = BinaryOperation.Div
+        default:
+            break
+        }
+    }
+    
     func perform0peration(symbol: String) {
         if BinaryOperation(rawValue: symbol) != nil {
             let possibleBinary = BinaryOperation(rawValue: symbol)
@@ -123,7 +141,6 @@ class CalculatorHead: CalcBrainInterface
             let possibleConstant = ConstantValues(rawValue: symbol)
             self.constants(operation: possibleConstant!)
         }
-        
     }
     
     func clear() {

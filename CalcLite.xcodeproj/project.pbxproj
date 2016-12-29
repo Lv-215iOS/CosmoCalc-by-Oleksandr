@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		258C3F921E15310F00DB7BBA /* circleOperations2.png in Resources */ = {isa = PBXBuildFile; fileRef = 258C3F911E15310F00DB7BBA /* circleOperations2.png */; };
 		259751DD1E14308B007E49BA /* cosmo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 259751DC1E14308B007E49BA /* cosmo1.jpg */; };
 		259751DF1E14346B007E49BA /* circleDigit.png in Resources */ = {isa = PBXBuildFile; fileRef = 259751DE1E14346B007E49BA /* circleDigit.png */; };
 		259751E11E143744007E49BA /* circleBinary.png in Resources */ = {isa = PBXBuildFile; fileRef = 259751E01E143744007E49BA /* circleBinary.png */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		258C3F911E15310F00DB7BBA /* circleOperations2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleOperations2.png; sourceTree = SOURCE_ROOT; };
 		259751DC1E14308B007E49BA /* cosmo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cosmo1.jpg; sourceTree = SOURCE_ROOT; };
 		259751DE1E14346B007E49BA /* circleDigit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleDigit.png; sourceTree = SOURCE_ROOT; };
 		259751E01E143744007E49BA /* circleBinary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleBinary.png; sourceTree = SOURCE_ROOT; };
@@ -95,6 +97,7 @@
 		259C5F771E0C2FD700EA53BE /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				258C3F911E15310F00DB7BBA /* circleOperations2.png */,
 				259751E61E143AED007E49BA /* circleClear.png */,
 				259751E41E1439BD007E49BA /* circleEqual.png */,
 				259751E21E143872007E49BA /* circleOperations.png */,
@@ -284,6 +287,7 @@
 				259751E51E1439BD007E49BA /* circleEqual.png in Resources */,
 				25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */,
 				259751DD1E14308B007E49BA /* cosmo1.jpg in Resources */,
+				258C3F921E15310F00DB7BBA /* circleOperations2.png in Resources */,
 				259751E31E143872007E49BA /* circleOperations.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +473,7 @@
 				INFOPLIST_FILE = CalcLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalcLite;
+				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalculatorCosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,7 +488,7 @@
 				INFOPLIST_FILE = CalcLite/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalcLite;
+				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalculatorCosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

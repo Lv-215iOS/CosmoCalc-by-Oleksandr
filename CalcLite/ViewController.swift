@@ -44,15 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func buttonPressed(button: String) {
         let digit = button
-        
         if userIsInTheMiddleOfTyping {
-//            if digit == "." && decimalUsed == true {
-//                decimalUsed = false
-//                //return
-//            } else if digit == "." && decimalUsed == false {
-//                decimalUsed = true
-//            }
-            
             let TextCurrentlyInDisplay = outputController!.display.text!
             outputController!.display.text = TextCurrentlyInDisplay + digit
         } else {
@@ -97,8 +89,6 @@ class ViewController: UIViewController, UITableViewDelegate {
             userIsInTheMiddleOfTyping = true
         }
     }
-    
-
     
     func buttonDidPress(operation: String) {
         switch operation {

@@ -9,43 +9,6 @@
 
 import Foundation
 
-enum BinaryOperation: String {
-    case Plus = "+"
-    case Minus = "-"
-    case Mul = "*"
-    case Div = "/"
-    case Pow = "^"
-}
-
-enum UtilityOperation: String {
-    case Dot = "."
-    case Equal = "="
-}
-
-enum UnaryOperation: String {
-    case Sign = "±"
-    case Cos = "cos"
-    case Sqrt = "√"
-    case Sin = "sin"
-    case Tg = "tg"
-    case Ctg = "ctg"
-    case Pers = "%"
-    case Log = "log"
-}
-
-enum ConstantValues: String {
-    case Pi = "π"
-    case Exp = "e"
-}
-
-protocol CalcBrainInterface {
-    func digit(value: Double)
-    func binary(operation: BinaryOperation)
-    func unary(operation: UnaryOperation)
-    func utility(operation: UtilityOperation)
-    var result: ((Double?, Error?) -> ())? {get set}
-}
-
 class CalculatorHead: CalcBrainInterface
 {
     
@@ -64,8 +27,8 @@ class CalculatorHead: CalcBrainInterface
             switch operationSymbol {
             case .Equals:
 //                if operationSavedSymbol != nil {
-//                    //self.binary(operation: operationSavedSymbol!)
-//                    executePendingBinaryOperation()
+//                    self.binary(operation: operationSavedSymbol!)
+//                    //executePendingBinaryOperation()
 //                    result?(accumulatorValue, nil)
 //                }
                 executePendingBinaryOperation()
@@ -154,10 +117,10 @@ class CalculatorHead: CalcBrainInterface
         "±" : Operation.UnaryOperation({ -$0}),
         "%" : Operation.UnaryOperation({$0 / 100}),
         "√" : Operation.UnaryOperation(sqrt),
-        "cos" : Operation.UnaryOperation(cos),
-        "sin": Operation.UnaryOperation(sin),
-        "tg" : Operation.UnaryOperation(tan),
-        "ctg": Operation.UnaryOperation({1 / tan($0)}),
+        "cos" : Operation.UnaryOperation({cos($0 * M_PI / 180)}),
+        "sin": Operation.UnaryOperation({sin($0 * M_PI / 180)}),
+        "tg" : Operation.UnaryOperation({tan($0 * M_PI / 180)}),
+        "ctg": Operation.UnaryOperation({1 / tan($0 * M_PI / 180)}),
         "log": Operation.UnaryOperation(log2),
         
         "*": Operation.BinaryOperation({ $0 * $1 }),

@@ -29,6 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
+        
     
     var displayValue: Double {
         get {
@@ -130,6 +131,11 @@ class ViewController: UIViewController, UITableViewDelegate {
             break
         }
     }
+    
+    @IBAction func transitionGraphController(_ sender: Any) {
+        performSegue(withIdentifier: "segueGraphingController", sender: self)
+    }
+    
 }
     
 

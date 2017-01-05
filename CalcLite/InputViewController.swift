@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol InputInterface {
-    var buttonDidPress: ((_ operation: String)->())? {get set}
-}
-
 class InputViewController: UIViewController, InputInterface {
     
     var buttonDidPress: ((String) -> ())? = nil

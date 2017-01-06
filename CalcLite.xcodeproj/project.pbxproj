@@ -17,6 +17,8 @@
 		259B801D1E1CE44600CAAF7E /* GlobalProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259B801C1E1CE44600CAAF7E /* GlobalProtocols.swift */; };
 		25A813791E1EA5A9003C3C03 /* GraphingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A813781E1EA5A9003C3C03 /* GraphingViewController.swift */; };
 		25A8137D1E1EAE46003C3C03 /* cosmo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25A8137C1E1EAE46003C3C03 /* cosmo2.jpg */; };
+		25ABAA7E1E1FCE0B00170A5C /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25ABAA7C1E1FCE0B00170A5C /* Icon-60@2x.png */; };
+		25ABAA7F1E1FCE0B00170A5C /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25ABAA7D1E1FCE0B00170A5C /* Icon-60@3x.png */; };
 		25B412991E0325BF00AA6522 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412971E0325BF00AA6522 /* InputViewController.swift */; };
 		25B4129A1E0325BF00AA6522 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412981E0325BF00AA6522 /* OutputViewController.swift */; };
 		25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */; };
@@ -57,6 +59,8 @@
 		259B801C1E1CE44600CAAF7E /* GlobalProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalProtocols.swift; path = ../GlobalProtocols.swift; sourceTree = "<group>"; };
 		25A813781E1EA5A9003C3C03 /* GraphingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphingViewController.swift; sourceTree = "<group>"; };
 		25A8137C1E1EAE46003C3C03 /* cosmo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cosmo2.jpg; sourceTree = SOURCE_ROOT; };
+		25ABAA7C1E1FCE0B00170A5C /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
+		25ABAA7D1E1FCE0B00170A5C /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = SOURCE_ROOT; };
 		25B412971E0325BF00AA6522 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		25B412981E0325BF00AA6522 /* OutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
 		25E8EBA41DF84BED00B81DA4 /* CalcLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,8 @@
 		259C5F771E0C2FD700EA53BE /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				25ABAA7C1E1FCE0B00170A5C /* Icon-60@2x.png */,
+				25ABAA7D1E1FCE0B00170A5C /* Icon-60@3x.png */,
 				25A8137C1E1EAE46003C3C03 /* cosmo2.jpg */,
 				258C3F911E15310F00DB7BBA /* circleOperations2.png */,
 				259751E61E143AED007E49BA /* circleClear.png */,
@@ -297,8 +303,10 @@
 				259751E51E1439BD007E49BA /* circleEqual.png in Resources */,
 				25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */,
 				259751DD1E14308B007E49BA /* cosmo1.jpg in Resources */,
+				25ABAA7F1E1FCE0B00170A5C /* Icon-60@3x.png in Resources */,
 				258C3F921E15310F00DB7BBA /* circleOperations2.png in Resources */,
 				259751E31E143872007E49BA /* circleOperations.png in Resources */,
+				25ABAA7E1E1FCE0B00170A5C /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

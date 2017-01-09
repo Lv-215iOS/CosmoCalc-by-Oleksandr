@@ -28,7 +28,7 @@ class CalculatorHead: CalcBrainInterface
             case .Equals:
 //                if operationSavedSymbol != nil {
 //                    self.binary(operation: operationSavedSymbol!)
-//                    //executePendingBinaryOperation()
+//                     //executePendingBinaryOperation()
 //                    result?(accumulatorValue, nil)
 //                }
                 executePendingBinaryOperation()

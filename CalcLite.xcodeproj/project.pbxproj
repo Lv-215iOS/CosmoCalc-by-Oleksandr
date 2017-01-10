@@ -21,6 +21,7 @@
 		25ABAA7F1E1FCE0B00170A5C /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25ABAA7D1E1FCE0B00170A5C /* Icon-60@3x.png */; };
 		25B412991E0325BF00AA6522 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412971E0325BF00AA6522 /* InputViewController.swift */; };
 		25B4129A1E0325BF00AA6522 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B412981E0325BF00AA6522 /* OutputViewController.swift */; };
+		25BB1C961E24E1D600C82BF1 /* button0.1.1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25BB1C951E24E1D600C82BF1 /* button0.1.1.mp3 */; };
 		25E8EBA81DF84BED00B81DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */; };
 		25E8EBAA1DF84BED00B81DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E8EBA91DF84BED00B81DA4 /* ViewController.swift */; };
 		25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E8EBAB1DF84BED00B81DA4 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		25ABAA7D1E1FCE0B00170A5C /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = SOURCE_ROOT; };
 		25B412971E0325BF00AA6522 /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		25B412981E0325BF00AA6522 /* OutputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
+		25BB1C951E24E1D600C82BF1 /* button0.1.1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = button0.1.1.mp3; sourceTree = SOURCE_ROOT; };
 		25E8EBA41DF84BED00B81DA4 /* CalcLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E8EBA71DF84BED00B81DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25E8EBA91DF84BED00B81DA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			name = Pictures;
 			sourceTree = "<group>";
 		};
+		25BB1C941E24E1BF00C82BF1 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				25BB1C951E24E1D600C82BF1 /* button0.1.1.mp3 */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
 		25E8EB9B1DF84BED00B81DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +154,7 @@
 		25E8EBA61DF84BED00B81DA4 /* CalcLite */ = {
 			isa = PBXGroup;
 			children = (
+				25BB1C941E24E1BF00C82BF1 /* Sound */,
 				259C5F771E0C2FD700EA53BE /* Pictures */,
 				25B412971E0325BF00AA6522 /* InputViewController.swift */,
 				259B801C1E1CE44600CAAF7E /* GlobalProtocols.swift */,
@@ -303,6 +314,7 @@
 				259751E51E1439BD007E49BA /* circleEqual.png in Resources */,
 				25E8EBAD1DF84BED00B81DA4 /* Main.storyboard in Resources */,
 				259751DD1E14308B007E49BA /* cosmo1.jpg in Resources */,
+				25BB1C961E24E1D600C82BF1 /* button0.1.1.mp3 in Resources */,
 				25ABAA7F1E1FCE0B00170A5C /* Icon-60@3x.png in Resources */,
 				258C3F921E15310F00DB7BBA /* circleOperations2.png in Resources */,
 				259751E31E143872007E49BA /* circleOperations.png in Resources */,
@@ -496,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalculatorCosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -511,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Calc.CalculatorCosmos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

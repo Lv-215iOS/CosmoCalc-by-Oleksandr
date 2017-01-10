@@ -26,11 +26,6 @@ class CalculatorHead: CalcBrainInterface
         if let operationSymbol = operations[operation.rawValue] {
             switch operationSymbol {
             case .Equals:
-//                if operationSavedSymbol != nil {
-//                    self.binary(operation: operationSavedSymbol!)
-//                     //executePendingBinaryOperation()
-//                    result?(accumulatorValue, nil)
-//                }
                 executePendingBinaryOperation()
                 result?(accumulatorValue, nil)
             default:

@@ -12,6 +12,10 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     var outputController: OutputViewController? = nil
     var inputController: InputViewController? = nil
+    var userIsInTheMiddleOfTyping = false
+    var decimalUsed = false
+    
+    
     private var head = CalculatorHead()
     
     override func viewDidLoad() {
@@ -29,7 +33,6 @@ class ViewController: UIViewController, UITableViewDelegate {
             }
         }
     }
-        
     
     var displayValue: Double {
         get {
@@ -39,9 +42,6 @@ class ViewController: UIViewController, UITableViewDelegate {
             outputController!.display.text = String(newValue)
         }
     }
-    
-    var userIsInTheMiddleOfTyping = false
-    var decimalUsed = false
     
     func buttonPressed(button: String) {
         let digit = button
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func clerButtonPressed(operation: String) {
+    func clearButtonPressed(operation: String) {
         userIsInTheMiddleOfTyping = false
         decimalUsed = false
         head.clear()
@@ -77,8 +77,9 @@ class ViewController: UIViewController, UITableViewDelegate {
         head.result = { (value, error) -> () in
             self.displayValue = value!
         }
-        self.outputController?.display.text = "0"
+        self.outputController?.display.text = "0.0"
     }
+
     
     func dotButtonPressed(operation: String) {
         if !decimalUsed && userIsInTheMiddleOfTyping {
@@ -93,49 +94,19 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     func buttonDidPress(operation: String) {
         switch operation {
-        case "1": buttonPressed(button: operation)
-        case "2": buttonPressed(button: operation)
-        case "3": buttonPressed(button: operation)
-        case "4": buttonPressed(button: operation)
-        case "5": buttonPressed(button: operation)
-        case "6": buttonPressed(button: operation)
-        case "7": buttonPressed(button: operation)
-        case "8": buttonPressed(button: operation)
-        case "9": buttonPressed(button: operation)
-        case "0": buttonPressed(button: operation)
-            
-        case ".": dotButtonPressed(operation: operation)
-            
-        case "π": performingCurrentOperation(operation: operation)
-        case "e": performingCurrentOperation(operation: operation)
-            
-        case "+": performingCurrentOperation(operation: operation)
-        case "-": performingCurrentOperation(operation: operation)
-        case "/": performingCurrentOperation(operation: operation)
-        case "*": performingCurrentOperation(operation: operation)
-            
-        case "√": performingCurrentOperation(operation: operation)
-        case "^": performingCurrentOperation(operation: operation)
-        case "log": performingCurrentOperation(operation: operation)
-        case "cos": performingCurrentOperation(operation: operation)
-        case "sin": performingCurrentOperation(operation: operation)
-        case "tg": performingCurrentOperation(operation: operation)
-        case "ctg": performingCurrentOperation(operation: operation)
-        case "%": performingCurrentOperation(operation: operation)
-        case "±": performingCurrentOperation(operation: operation)
-        case "=": performingCurrentOperation(operation: operation)
-            
-        case "c": clerButtonPressed(operation: operation)
-            
+        case "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+            : buttonPressed(button: operation)
+        case "."
+            : dotButtonPressed(operation: operation)
+        case "π", "e", "+", "-", "/", "*", "√", "^",
+             "log", "cos", "sin", "tg", "ctg", "%", "±", "="
+            : performingCurrentOperation(operation: operation)
+        case "c"
+            : clearButtonPressed(operation: operation)
         default:
             break
         }
     }
-    
-    @IBAction func transitionGraphController(_ sender: Any) {
-        performSegue(withIdentifier: "segueGraphingController", sender: self)
-    }
-    
 }
     
 

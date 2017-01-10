@@ -50,18 +50,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suw-xt-Efn">
-                                <rect key="frame" x="279" y="640" width="80" height="23"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="OP0-W7-Xrv"/>
-                                </constraints>
-                                <state key="normal" title="graphics -&gt;">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="2zc-3Y-KfJ" kind="show" id="lK6-Hf-zkP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,8 +60,6 @@
                             <constraint firstItem="s49-T9-Rrv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="IE5-PI-776"/>
                             <constraint firstItem="yEe-1p-jkX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Iqh-aj-XyL"/>
                             <constraint firstItem="yEe-1p-jkX" firstAttribute="leading" secondItem="NIZ-K8-lxc" secondAttribute="leading" id="PCi-Lg-bQS"/>
-                            <constraint firstItem="Suw-xt-Efn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pny-Yy-cVf"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Suw-xt-Efn" secondAttribute="bottom" constant="4" id="SzM-yx-TK4"/>
                             <constraint firstItem="yEe-1p-jkX" firstAttribute="leading" secondItem="s49-T9-Rrv" secondAttribute="leading" id="V5h-Iy-fWw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s49-T9-Rrv" secondAttribute="bottom" id="gHB-K2-8PH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NIZ-K8-lxc" secondAttribute="bottom" constant="586" id="j4A-gF-SGV"/>
@@ -2051,60 +2037,40 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="animate0Button" destination="NOf-3q-HsJ" id="ceU-uv-ce4"/>
+                        <outlet property="animate1Button" destination="rDD-Qj-jRt" id="VFn-ok-UHi"/>
+                        <outlet property="animate2Button" destination="lmR-U8-p9R" id="nMJ-TN-28o"/>
+                        <outlet property="animate3Button" destination="CkR-qU-oLZ" id="g5n-e1-xbb"/>
+                        <outlet property="animate4Button" destination="Ftx-Mr-0bd" id="IcV-Od-oSG"/>
+                        <outlet property="animate5Button" destination="yT8-Uu-JKn" id="UJP-Im-Kpc"/>
+                        <outlet property="animate6Button" destination="cfy-GZ-nXl" id="gaO-hd-g1I"/>
+                        <outlet property="animate7Button" destination="L6W-Yg-thx" id="DZN-MC-9Qw"/>
+                        <outlet property="animate8Button" destination="W0k-lH-yyE" id="OaW-s4-TYX"/>
+                        <outlet property="animate9Button" destination="hff-NO-bEp" id="Y75-hI-ugV"/>
+                        <outlet property="animateClearButton" destination="d2V-Or-fEP" id="h5V-ou-P7I"/>
+                        <outlet property="animateCosButton" destination="woT-Dz-4X0" id="Dam-jW-xWL"/>
+                        <outlet property="animateCtanButton" destination="1Ai-8D-Vkh" id="bIr-dz-rhj"/>
+                        <outlet property="animateDivButton" destination="OxU-Eo-Wfe" id="kpU-4u-1oE"/>
+                        <outlet property="animateDotButton" destination="YhD-UW-YvM" id="YdJ-jP-rDh"/>
+                        <outlet property="animateEqualButton" destination="fpG-bP-2Ud" id="jWG-Yw-cXT"/>
+                        <outlet property="animateExpButton" destination="LLh-JX-Ygz" id="ze7-0F-LXg"/>
+                        <outlet property="animateLogButton" destination="DX4-dE-9Ow" id="76l-x9-uk9"/>
+                        <outlet property="animateMinButton" destination="YJZ-Bp-cC5" id="wgR-NO-kqF"/>
+                        <outlet property="animateMultButton" destination="CEm-Yt-cFh" id="dyt-pB-AW9"/>
+                        <outlet property="animatePersButton" destination="7e5-cd-h9h" id="4KY-UR-QcJ"/>
+                        <outlet property="animatePiButton" destination="f4R-eT-u5r" id="yLE-Zp-N40"/>
+                        <outlet property="animatePlusButton" destination="E28-Pb-IX4" id="K8J-ma-1z4"/>
+                        <outlet property="animatePowButton" destination="Ise-zx-j3F" id="1fZ-Bh-NWN"/>
+                        <outlet property="animateSignButton" destination="3DN-9H-1xh" id="vTv-7g-0Tk"/>
+                        <outlet property="animateSinButton" destination="Udq-X7-M3B" id="Yt2-sc-oi3"/>
+                        <outlet property="animateSqrtButton" destination="dAW-aC-yMp" id="N8s-SD-SUL"/>
+                        <outlet property="animateTanButton" destination="aeT-K7-HWF" id="xb1-1Q-fhN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfY-BT-gmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="564" y="181"/>
-        </scene>
-        <!--Graphing View Controller-->
-        <scene sceneID="lbs-h0-PsE">
-            <objects>
-                <viewController id="2zc-3Y-KfJ" customClass="GraphingViewController" customModule="CalcLite" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iw1-zE-JA8"/>
-                        <viewControllerLayoutGuide type="bottom" id="T6Z-gP-dj4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="05V-0E-GjA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosmo2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eQX-GI-I35">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graphics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DH-ch-xLK">
-                                <rect key="frame" x="113" y="20" width="148" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.1198911676" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yow-Rl-j1B">
-                                <rect key="frame" x="16" y="629" width="50" height="30"/>
-                                <state key="normal" title="&lt;-back">
-                                    <color key="titleColor" red="1" green="0.1198911676" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="transitionViewController:" destination="2zc-3Y-KfJ" eventType="touchUpInside" id="ugG-40-BHf"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueBackToViewController" id="yec-dX-O9v"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="eQX-GI-I35" firstAttribute="leading" secondItem="05V-0E-GjA" secondAttribute="leading" id="2hH-ft-QBB"/>
-                            <constraint firstAttribute="trailing" secondItem="eQX-GI-I35" secondAttribute="trailing" id="7R8-Rb-ZWc"/>
-                            <constraint firstItem="Yow-Rl-j1B" firstAttribute="leading" secondItem="05V-0E-GjA" secondAttribute="leadingMargin" id="8hF-cU-GZM"/>
-                            <constraint firstItem="T6Z-gP-dj4" firstAttribute="top" secondItem="Yow-Rl-j1B" secondAttribute="bottom" constant="8" id="Pce-MI-j9b"/>
-                            <constraint firstItem="1DH-ch-xLK" firstAttribute="leading" secondItem="05V-0E-GjA" secondAttribute="leadingMargin" constant="97" id="UNG-k1-5cI"/>
-                            <constraint firstItem="T6Z-gP-dj4" firstAttribute="top" secondItem="eQX-GI-I35" secondAttribute="bottom" id="bxe-BH-EQx"/>
-                            <constraint firstItem="1DH-ch-xLK" firstAttribute="top" secondItem="iw1-zE-JA8" secondAttribute="bottom" id="gT7-DS-maE"/>
-                            <constraint firstItem="eQX-GI-I35" firstAttribute="top" secondItem="05V-0E-GjA" secondAttribute="top" id="li8-NM-yUF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1DH-ch-xLK" secondAttribute="trailing" constant="98" id="z2M-Lp-9c9"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dIO-bN-wjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1094" y="89"/>
         </scene>
         <!--Output View Controller-->
         <scene sceneID="ug5-oW-asW">
@@ -2118,7 +2084,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="tSF-ql-pBi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="tSF-ql-pBi">
                                 <rect key="frame" x="16" y="8" width="343" height="36"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2137,6 +2103,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationDisplay" destination="tSF-ql-pBi" id="S5b-cq-Dwm"/>
                         <outlet property="display" destination="tSF-ql-pBi" id="Mhc-5P-Mqk"/>
                     </connections>
                 </viewController>
@@ -2152,7 +2119,6 @@
         <image name="circleEqual.png" width="306" height="306"/>
         <image name="circleOperations2.png" width="241" height="241"/>
         <image name="cosmo1.jpg" width="640" height="1136"/>
-        <image name="cosmo2.jpg" width="1280" height="800"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

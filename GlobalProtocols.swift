@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MARK: Interfaces
+
 protocol InputInterface {
     var buttonDidPress: ((_ operation: String)->())? {get set}
 }
@@ -16,6 +18,16 @@ protocol InputInterface {
 protocol OutputInterface {
     func outputResult(info: String)
 }
+
+protocol CalcBrainInterface {
+    func digit(value: Double)
+    func binary(operation: BinaryOperation)
+    func unary(operation: UnaryOperation)
+    func utility(operation: UtilityOperation)
+    var result: ((Double?, Error?) -> ())? {get set}
+}
+
+//MARK: Operations
 
 enum BinaryOperation: String {
     case Plus = "+"
@@ -25,8 +37,8 @@ enum BinaryOperation: String {
     case Pow = "^"
 }
 
+/// description equal operation
 enum UtilityOperation: String {
-    case Dot = "."
     case Equal = "="
 }
 
@@ -46,10 +58,4 @@ enum ConstantValues: String {
     case Exp = "e"
 }
 
-protocol CalcBrainInterface {
-    func digit(value: Double)
-    func binary(operation: BinaryOperation)
-    func unary(operation: UnaryOperation)
-    func utility(operation: UtilityOperation)
-    var result: ((Double?, Error?) -> ())? {get set}
-}
+

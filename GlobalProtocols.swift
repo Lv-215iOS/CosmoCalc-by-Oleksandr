@@ -9,14 +9,42 @@
 import Foundation
 import UIKit
 
-// MARK: Interfaces
-
-protocol InputInterface {
-    var buttonDidPress: ((_ operation: String)->())? {get set}
+enum BinaryOperation : String{
+    case Plus = "+"
+    case Minus = "-"
+    case Mul = "*"
+    case Div = "/"
+    case Power = " ̂"
 }
 
-protocol OutputInterface {
-    func outputResult(info: String)
+enum UtilityOperation : String{
+    case RightBracket = ")"
+    case LeftBracket = "("
+    case Dot = "."
+    case Equal = "="
+    case Clean = "C"
+    case AClean = "AC"
+    case MPlus = "M+"
+    case MMinus = "M-"
+    case MClear = "MC"
+    case MRead = "MR"
+}
+
+enum UnaryOperation : String{
+    case Percent = "%"
+    case Sin = "sin"
+    case Cos = "cos"
+    case Tg = "tg"
+    case Sinh = "sinh"
+    case Cosh = "cosh"
+    case Tgh = "tgh"
+    case Ln = "ln"
+    case Sqrt = "√"
+    case PlusMinus = "+/-"
+    case Ctg = "ctg"
+    case Log = "log"
+    case Ctgh = "ctgh"
+    case Fact = "!"
 }
 
 protocol CalcBrainInterface {
@@ -27,35 +55,11 @@ protocol CalcBrainInterface {
     var result: ((Double?, Error?) -> ())? {get set}
 }
 
-//MARK: Operations
-
-enum BinaryOperation: String {
-    case Plus = "+"
-    case Minus = "-"
-    case Mul = "*"
-    case Div = "/"
-    case Pow = "^"
+protocol OutputInterface {
+    func outputInfo(info: String)
 }
 
-/// description equal operation
-enum UtilityOperation: String {
-    case Equal = "="
+protocol InputInterface {
+    var buttonDidPress: ((_ operation: String)->())? {get set}
 }
-
-enum UnaryOperation: String {
-    case Sign = "±"
-    case Cos = "cos"
-    case Sqrt = "√"
-    case Sin = "sin"
-    case Tg = "tg"
-    case Ctg = "ctg"
-    case Pers = "%"
-    case Log = "log"
-}
-
-enum ConstantValues: String {
-    case Pi = "π"
-    case Exp = "e"
-}
-
 

@@ -13,7 +13,7 @@ class OutputViewController: UIViewController, OutputInterface {
     @IBOutlet var animationDisplay: UILabel!
     
     @IBOutlet weak var display: UILabel!
-    func outputResult(info: String) {
+    func outputInfo(info: String) {
         //display.text = String(format: "%g", Double(info)!)
         display.text = info
         //binaryOperationUsed = false

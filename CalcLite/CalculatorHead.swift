@@ -9,6 +9,11 @@
 
 import Foundation
 
+enum ConstantValues: String {
+    case Pi = "π"
+    case Exp = "e"
+}
+
 class CalculatorHead: CalcBrainInterface
 {
     
@@ -109,7 +114,7 @@ class CalculatorHead: CalcBrainInterface
         "π" : Operation.Constant(M_PI),
         "e" : Operation.Constant(M_E),
         
-        "±" : Operation.UnaryOperation({ -$0}),
+        "+/-" : Operation.UnaryOperation({ -$0}),
         "%" : Operation.UnaryOperation({$0 / 100}),
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation({cos($0 * M_PI / 180)}),
@@ -122,7 +127,7 @@ class CalculatorHead: CalcBrainInterface
         "/": Operation.BinaryOperation({ $0 / $1 }),
         "+": Operation.BinaryOperation({ $0 + $1 }),
         "-": Operation.BinaryOperation({ $0 - $1 }),
-        "^": Operation.BinaryOperation({pow($0, $1)}),
+        " ̂": Operation.BinaryOperation({pow($0, $1)}),
         "=": Operation.Equals
     ]
     private enum Operation {

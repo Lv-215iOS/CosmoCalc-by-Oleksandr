@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate {
         
         head.result = { (value, error) -> () in
             if (value != nil) {
-                self.outputController?.outputResult(info: "\(value!)")
+                self.outputController?.outputInfo(info: "\(value!)")
             }
         }
     }
@@ -98,8 +98,8 @@ class ViewController: UIViewController, UITableViewDelegate {
             : buttonPressed(button: operation)
         case "."
             : dotButtonPressed(operation: operation)
-        case "π", "e", "+", "-", "/", "*", "√", "^",
-             "log", "cos", "sin", "tg", "ctg", "%", "±", "="
+        case "π", "e", "+", "-", "/", "*", "√", " ̂",
+             "log", "cos", "sin", "tg", "ctg", "%", "+/-", "="
             : performingCurrentOperation(operation: operation)
         case "c"
             : clearButtonPressed(operation: operation)

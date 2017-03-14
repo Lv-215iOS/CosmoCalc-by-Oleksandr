@@ -14,11 +14,9 @@ enum ConstantValues: String {
     case Exp = "e"
 }
 
-class CalculatorHead: CalcBrainInterface
-{
+class CalculatorHead: CalcBrainInterface {
     
     var accumulatorValue: Double? = 0.0
-    var tempValue: Double? = 0.0
     var operationSavedSymbol: BinaryOperation?
     
     func digit(value: Double) {
@@ -130,6 +128,7 @@ class CalculatorHead: CalcBrainInterface
         " ̂": Operation.BinaryOperation({pow($0, $1)}),
         "=": Operation.Equals
     ]
+    
     private enum Operation {
         case Constant(Double)
         case UnaryOperation((Double) -> Double)
@@ -153,11 +152,3 @@ class CalculatorHead: CalcBrainInterface
         var fistOperand: Double
     }
 }
-
-
-
-
-
-
-
-

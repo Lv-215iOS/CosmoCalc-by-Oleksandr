@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITableViewDelegate {
     var userIsInTheMiddleOfTyping = false
     var decimalUsed = false
     
-    
     private var head = CalculatorHead()
     
     override func viewDidLoad() {
@@ -108,6 +107,4 @@ class ViewController: UIViewController, UITableViewDelegate {
         }
     }
 }
-    
 
-    

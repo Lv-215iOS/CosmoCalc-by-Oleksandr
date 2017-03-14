@@ -14,9 +14,7 @@ class OutputViewController: UIViewController, OutputInterface {
     
     @IBOutlet weak var display: UILabel!
     func outputInfo(info: String) {
-        //display.text = String(format: "%g", Double(info)!)
         display.text = info
-        //binaryOperationUsed = false
     }
     
     override func viewDidLoad() {
